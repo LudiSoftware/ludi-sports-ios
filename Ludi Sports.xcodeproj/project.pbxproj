@@ -10,7 +10,6 @@
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
 		FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71C29F7029E00E2E26B /* AppDelegate.swift */; };
 		FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */; };
-		FB06D72129F7029E00E2E26B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D72029F7029E00E2E26B /* ViewController.swift */; };
 		FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72229F7029E00E2E26B /* Main.storyboard */; };
 		FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72529F7029F00E2E26B /* Assets.xcassets */; };
 		FB06D72929F7029F00E2E26B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72729F7029F00E2E26B /* LaunchScreen.storyboard */; };
@@ -55,7 +54,6 @@
 		FB06D71929F7029E00E2E26B /* Ludi Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ludi Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB06D71C29F7029E00E2E26B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB06D72029F7029E00E2E26B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB06D72329F7029E00E2E26B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB06D72529F7029F00E2E26B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB06D72829F7029F00E2E26B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				FB06D73929F7096500E2E26B /* realm */,
 				FB06D71C29F7029E00E2E26B /* AppDelegate.swift */,
 				FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */,
-				FB06D72029F7029E00E2E26B /* ViewController.swift */,
 				FB06D72229F7029E00E2E26B /* Main.storyboard */,
 				FB06D72529F7029F00E2E26B /* Assets.xcassets */,
 				FB06D72729F7029F00E2E26B /* LaunchScreen.storyboard */,
@@ -395,7 +392,6 @@
 				FB06D75929F74AD400E2E26B /* League.swift in Sources */,
 				FB06D76E29F7547A00E2E26B /* RosterSession.swift in Sources */,
 				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
-				FB06D72129F7029E00E2E26B /* ViewController.swift in Sources */,
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
