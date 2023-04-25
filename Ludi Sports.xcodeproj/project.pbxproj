@@ -19,6 +19,33 @@
 		FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB06D73529F7075F00E2E26B /* GoogleService-Info.plist */; };
 		FB06D73829F7086F00E2E26B /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D73729F7086F00E2E26B /* AuthController.swift */; };
 		FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D73B29F7098E00E2E26B /* RealmInstance.swift */; };
+		FB06D73E29F70FBA00E2E26B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D73D29F70FBA00E2E26B /* User.swift */; };
+		FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D73F29F7101400E2E26B /* LudiSystem.swift */; };
+		FB06D74329F710DD00E2E26B /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74229F710DD00E2E26B /* DateTime.swift */; };
+		FB06D74529F7110300E2E26B /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74429F7110300E2E26B /* Coach.swift */; };
+		FB06D74729F7110C00E2E26B /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74629F7110C00E2E26B /* Parent.swift */; };
+		FB06D74929F7111500E2E26B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74829F7111500E2E26B /* Player.swift */; };
+		FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74A29F74A7C00E2E26B /* Team.swift */; };
+		FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74C29F74A8900E2E26B /* PlayerRef.swift */; };
+		FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D74E29F74A8B00E2E26B /* Roster.swift */; };
+		FB06D75129F74A8D00E2E26B /* TryOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75029F74A8D00E2E26B /* TryOut.swift */; };
+		FB06D75329F74A8F00E2E26B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75229F74A8E00E2E26B /* Chat.swift */; };
+		FB06D75529F74A9000E2E26B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75429F74A9000E2E26B /* Note.swift */; };
+		FB06D75729F74A9200E2E26B /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75629F74A9200E2E26B /* Organization.swift */; };
+		FB06D75929F74AD400E2E26B /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75829F74AD400E2E26B /* League.swift */; };
+		FB06D75B29F74AD500E2E26B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75A29F74AD500E2E26B /* Service.swift */; };
+		FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75C29F74AD800E2E26B /* Sport.swift */; };
+		FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D75E29F74ADA00E2E26B /* Location.swift */; };
+		FB06D76129F74AFF00E2E26B /* CustomAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D76029F74AFF00E2E26B /* CustomAttribute.swift */; };
+		FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D76529F751E400E2E26B /* ModeProvider.swift */; };
+		FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D76829F7541C00E2E26B /* RealmFind.swift */; };
+		FB06D76C29F7547600E2E26B /* TeamSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D76B29F7547600E2E26B /* TeamSession.swift */; };
+		FB06D76E29F7547A00E2E26B /* RosterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D76D29F7547A00E2E26B /* RosterSession.swift */; };
+		FB06D77029F866FC00E2E26B /* FireCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D76F29F866FC00E2E26B /* FireCore.swift */; };
+		FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77229F8747300E2E26B /* LudiLoginViewController.swift */; };
+		FB06D77529F875D900E2E26B /* FireLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77429F875D900E2E26B /* FireLogin.swift */; };
+		FB06D77729F8774B00E2E26B /* FireParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77629F8774B00E2E26B /* FireParser.swift */; };
+		FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77829F8775C00E2E26B /* RealmParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +63,33 @@
 		FB06D73529F7075F00E2E26B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB06D73729F7086F00E2E26B /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		FB06D73B29F7098E00E2E26B /* RealmInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInstance.swift; sourceTree = "<group>"; };
+		FB06D73D29F70FBA00E2E26B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FB06D73F29F7101400E2E26B /* LudiSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudiSystem.swift; sourceTree = "<group>"; };
+		FB06D74229F710DD00E2E26B /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		FB06D74429F7110300E2E26B /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
+		FB06D74629F7110C00E2E26B /* Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
+		FB06D74829F7111500E2E26B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FB06D74A29F74A7C00E2E26B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FB06D74C29F74A8900E2E26B /* PlayerRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRef.swift; sourceTree = "<group>"; };
+		FB06D74E29F74A8B00E2E26B /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
+		FB06D75029F74A8D00E2E26B /* TryOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOut.swift; sourceTree = "<group>"; };
+		FB06D75229F74A8E00E2E26B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		FB06D75429F74A9000E2E26B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		FB06D75629F74A9200E2E26B /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		FB06D75829F74AD400E2E26B /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		FB06D75A29F74AD500E2E26B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FB06D75C29F74AD800E2E26B /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		FB06D75E29F74ADA00E2E26B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FB06D76029F74AFF00E2E26B /* CustomAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAttribute.swift; sourceTree = "<group>"; };
+		FB06D76529F751E400E2E26B /* ModeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeProvider.swift; sourceTree = "<group>"; };
+		FB06D76829F7541C00E2E26B /* RealmFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFind.swift; sourceTree = "<group>"; };
+		FB06D76B29F7547600E2E26B /* TeamSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSession.swift; sourceTree = "<group>"; };
+		FB06D76D29F7547A00E2E26B /* RosterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterSession.swift; sourceTree = "<group>"; };
+		FB06D76F29F866FC00E2E26B /* FireCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCore.swift; sourceTree = "<group>"; };
+		FB06D77229F8747300E2E26B /* LudiLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudiLoginViewController.swift; sourceTree = "<group>"; };
+		FB06D77429F875D900E2E26B /* FireLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireLogin.swift; sourceTree = "<group>"; };
+		FB06D77629F8774B00E2E26B /* FireParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireParser.swift; sourceTree = "<group>"; };
+		FB06D77829F8775C00E2E26B /* RealmParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +144,10 @@
 		FB06D71B29F7029E00E2E26B /* Ludi Sports */ = {
 			isa = PBXGroup;
 			children = (
+				FB06D76429F751CD00E2E26B /* ui */,
+				FB06D76329F751C500E2E26B /* firebase */,
+				FB06D76229F751BF00E2E26B /* providers */,
+				FB06D74129F710CF00E2E26B /* utils */,
 				FB06D73929F7096500E2E26B /* realm */,
 				FB06D71C29F7029E00E2E26B /* AppDelegate.swift */,
 				FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */,
@@ -100,6 +158,7 @@
 				FB06D73529F7075F00E2E26B /* GoogleService-Info.plist */,
 				FB06D72A29F7029F00E2E26B /* Info.plist */,
 				FB06D73729F7086F00E2E26B /* AuthController.swift */,
+				FB06D73F29F7101400E2E26B /* LudiSystem.swift */,
 			);
 			path = "Ludi Sports";
 			sourceTree = "<group>";
@@ -107,8 +166,26 @@
 		FB06D73929F7096500E2E26B /* realm */ = {
 			isa = PBXGroup;
 			children = (
+				FB06D76A29F7546700E2E26B /* local */,
+				FB06D76729F7540800E2E26B /* extentions */,
 				FB06D73A29F7097500E2E26B /* models */,
 				FB06D73B29F7098E00E2E26B /* RealmInstance.swift */,
+				FB06D74629F7110C00E2E26B /* Parent.swift */,
+				FB06D74829F7111500E2E26B /* Player.swift */,
+				FB06D73D29F70FBA00E2E26B /* User.swift */,
+				FB06D74429F7110300E2E26B /* Coach.swift */,
+				FB06D74C29F74A8900E2E26B /* PlayerRef.swift */,
+				FB06D74E29F74A8B00E2E26B /* Roster.swift */,
+				FB06D75029F74A8D00E2E26B /* TryOut.swift */,
+				FB06D75629F74A9200E2E26B /* Organization.swift */,
+				FB06D75429F74A9000E2E26B /* Note.swift */,
+				FB06D75229F74A8E00E2E26B /* Chat.swift */,
+				FB06D75E29F74ADA00E2E26B /* Location.swift */,
+				FB06D75C29F74AD800E2E26B /* Sport.swift */,
+				FB06D75A29F74AD500E2E26B /* Service.swift */,
+				FB06D75829F74AD400E2E26B /* League.swift */,
+				FB06D76029F74AFF00E2E26B /* CustomAttribute.swift */,
+				FB06D74A29F74A7C00E2E26B /* Team.swift */,
 			);
 			path = realm;
 			sourceTree = "<group>";
@@ -118,6 +195,66 @@
 			children = (
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		FB06D74129F710CF00E2E26B /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D74229F710DD00E2E26B /* DateTime.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		FB06D76229F751BF00E2E26B /* providers */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D76529F751E400E2E26B /* ModeProvider.swift */,
+			);
+			path = providers;
+			sourceTree = "<group>";
+		};
+		FB06D76329F751C500E2E26B /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D76F29F866FC00E2E26B /* FireCore.swift */,
+				FB06D77429F875D900E2E26B /* FireLogin.swift */,
+				FB06D77629F8774B00E2E26B /* FireParser.swift */,
+			);
+			path = firebase;
+			sourceTree = "<group>";
+		};
+		FB06D76429F751CD00E2E26B /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D77129F8743D00E2E26B /* login */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		FB06D76729F7540800E2E26B /* extentions */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D76829F7541C00E2E26B /* RealmFind.swift */,
+				FB06D77829F8775C00E2E26B /* RealmParser.swift */,
+			);
+			path = extentions;
+			sourceTree = "<group>";
+		};
+		FB06D76A29F7546700E2E26B /* local */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D76D29F7547A00E2E26B /* RosterSession.swift */,
+				FB06D76B29F7547600E2E26B /* TeamSession.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		FB06D77129F8743D00E2E26B /* login */ = {
+			isa = PBXGroup;
+			children = (
+				FB06D77229F8747300E2E26B /* LudiLoginViewController.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +380,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB06D77729F8774B00E2E26B /* FireParser.swift in Sources */,
+				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
+				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
+				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
+				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
+				FB06D77029F866FC00E2E26B /* FireCore.swift in Sources */,
+				FB06D75329F74A8F00E2E26B /* Chat.swift in Sources */,
+				FB06D75129F74A8D00E2E26B /* TryOut.swift in Sources */,
+				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
+				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
+				FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */,
+				FB06D77529F875D900E2E26B /* FireLogin.swift in Sources */,
+				FB06D75929F74AD400E2E26B /* League.swift in Sources */,
+				FB06D76E29F7547A00E2E26B /* RosterSession.swift in Sources */,
+				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
 				FB06D72129F7029E00E2E26B /* ViewController.swift in Sources */,
+				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
+				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
+				FB06D73E29F70FBA00E2E26B /* User.swift in Sources */,
 				FB06D73829F7086F00E2E26B /* AuthController.swift in Sources */,
 				FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */,
+				FB06D74329F710DD00E2E26B /* DateTime.swift in Sources */,
+				FB06D75B29F74AD500E2E26B /* Service.swift in Sources */,
+				FB06D74929F7111500E2E26B /* Player.swift in Sources */,
+				FB06D74529F7110300E2E26B /* Coach.swift in Sources */,
+				FB06D76129F74AFF00E2E26B /* CustomAttribute.swift in Sources */,
+				FB06D76C29F7547600E2E26B /* TeamSession.swift in Sources */,
+				FB06D75729F74A9200E2E26B /* Organization.swift in Sources */,
+				FB06D74729F7110C00E2E26B /* Parent.swift in Sources */,
+				FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */,
 				FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

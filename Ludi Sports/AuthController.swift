@@ -13,6 +13,8 @@ import RealmSwift
 class AuthControllerViewController: UIViewController {
     
     static var hasInitialized = false
+    
+    var realmInstance = realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,22 +22,30 @@ class AuthControllerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        verifyUserLogin()
+        verifyUserLogin()
     }
     
-//    private func verifyUserLogin() {
-//        guard let safeUser = realm().safeUser() else {
-//            navigateUser(nil)
-//            return
-//        }
-//        navigateUser(safeUser)
-//    }
+    private func verifyUserLogin() {
+        realmInstance.safeUser { user in
+            navigateUser(user)
+            return
+        }
+        navigateUser(nil)
+    }
     
 
-//    private func navigateUser(_ user: User?) {
-//        if user == nil {
-//            launchActivity(MasterUserActivity.self) // Replace with your method to launch MasterUserActivity
-//        }
-//        launchActivity(MasterUserActivity.self) // Replace with your method to launch MasterUserActivity
-//    }
+    private func navigateUser(_ user: User?) {
+        if user == nil {
+            launchViewController(type: AuthControllerViewController.self) // Replace with your method to launch MasterUserActivity
+        }
+        launchViewController(type: AuthControllerViewController.self) // Replace with your method to launch MasterUserActivity
+    }
+}
+
+
+extension UIViewController {
+    func launchViewController<T: UIViewController>(type: T.Type) {
+        let viewController = T()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

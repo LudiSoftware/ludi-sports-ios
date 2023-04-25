@@ -9,6 +9,7 @@ target 'Ludi Sports' do
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Email'
+  pod 'FirebaseUI'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
