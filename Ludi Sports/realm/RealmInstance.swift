@@ -36,6 +36,7 @@ extension Realm {
     }
 }
 
+import RealmSwift
 
 extension Object {
     func updateFieldsAndSave(newObject: Object, realm: Realm) {
@@ -43,8 +44,10 @@ extension Object {
             try realm.write {
                 let fields = Mirror(reflecting: self).children.compactMap { $0.label }
                 for field in fields {
-                    let newValue = newObject.value(forKey: field)
-                    self.setValue(newValue, forKey: field)
+                    if field != "id" {
+                        let newValue = newObject.value(forKey: field)
+                        self.setValue(newValue, forKey: field)
+                    }
                 }
                 realm.add(self, update: .modified)
             }
@@ -53,4 +56,5 @@ extension Object {
         }
     }
 }
+
 

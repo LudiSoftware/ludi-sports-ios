@@ -83,7 +83,7 @@ extension Realm {
         safeWrite { realm in
             let user = User()
             user.id = userId
-            realm.add(user)
+            realm.add(user, update: .modified)
         }
     }
 

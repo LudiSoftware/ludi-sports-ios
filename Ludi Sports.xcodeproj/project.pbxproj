@@ -46,6 +46,9 @@
 		FB06D77729F8774B00E2E26B /* FireParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77629F8774B00E2E26B /* FireParser.swift */; };
 		FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77829F8775C00E2E26B /* RealmParser.swift */; };
 		FB06D77B29F87EBE00E2E26B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D77A29F87EBE00E2E26B /* DashboardViewController.swift */; };
+		FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */; };
+		FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */; };
+		FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556A29F8FA9B000DC692 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		FB06D77629F8774B00E2E26B /* FireParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireParser.swift; sourceTree = "<group>"; };
 		FB06D77829F8775C00E2E26B /* RealmParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmParser.swift; sourceTree = "<group>"; };
 		FB06D77A29F87EBE00E2E26B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudiSignUpViewController.swift; sourceTree = "<group>"; };
+		FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderLoginViewController.swift; sourceTree = "<group>"; };
+		FB41556A29F8FA9B000DC692 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,13 @@
 				FB06D76729F7540800E2E26B /* extentions */,
 				FB06D73A29F7097500E2E26B /* models */,
 				FB06D73B29F7098E00E2E26B /* RealmInstance.swift */,
+			);
+			path = realm;
+			sourceTree = "<group>";
+		};
+		FB06D73A29F7097500E2E26B /* models */ = {
+			isa = PBXGroup;
+			children = (
 				FB06D74629F7110C00E2E26B /* Parent.swift */,
 				FB06D74829F7111500E2E26B /* Player.swift */,
 				FB06D73D29F70FBA00E2E26B /* User.swift */,
@@ -186,13 +199,6 @@
 				FB06D76029F74AFF00E2E26B /* CustomAttribute.swift */,
 				FB06D74A29F74A7C00E2E26B /* Team.swift */,
 			);
-			path = realm;
-			sourceTree = "<group>";
-		};
-		FB06D73A29F7097500E2E26B /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
 			path = models;
 			sourceTree = "<group>";
 		};
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				FB06D74229F710DD00E2E26B /* DateTime.swift */,
+				FB41556A29F8FA9B000DC692 /* Extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -253,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				FB06D77229F8747300E2E26B /* LudiLoginViewController.swift */,
+				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
+				FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
 				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
+				FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */,
 				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
 				FB06D77029F866FC00E2E26B /* FireCore.swift in Sources */,
 				FB06D75329F74A8F00E2E26B /* Chat.swift in Sources */,
@@ -398,6 +408,8 @@
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
+				FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */,
+				FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */,
 				FB06D73E29F70FBA00E2E26B /* User.swift in Sources */,
 				FB06D73829F7086F00E2E26B /* AuthController.swift in Sources */,
 				FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */,

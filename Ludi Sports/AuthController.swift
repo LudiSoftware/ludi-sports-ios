@@ -26,19 +26,18 @@ class AuthControllerViewController: UIViewController {
     }
     
     private func verifyUserLogin() {
-        realmInstance.safeUser { user in
+        if let user = realmInstance.realmUser() {
             navigateUser(user)
-            return
+        } else {
+            navigateUser(nil)
         }
-        navigateUser(nil)
     }
     
-
     private func navigateUser(_ user: User?) {
         if user == nil {
-            return segue("toMainDashboard") // Replace with your method to launch MasterUserActivity
+            return segue("toLudiLogin") // Replace with your method to launch MasterUserActivity
         }
-        performSegue(withIdentifier: "toMainDashboard", sender: nil) // Replace with your method to launch MasterUserActivity
+        return self.segue("toMainDashboard") // Replace with your method to launch MasterUserActivity
     }
 }
 

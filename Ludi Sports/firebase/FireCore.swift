@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import FirebaseAuth
+import FirebaseAuthUI
+import Firebase
 
 enum DatabasePaths: String {
     case sports = "sports"
@@ -35,14 +36,8 @@ func coreFirebaseUserUid() -> String? {
     return Auth.auth().currentUser?.uid
 }
 
-//func coreFireLogoutAsync(context: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
-//    let authUI = FirebaseAuth.defaultAuthUI()
-//    authUI?.signOut(with: context, completion: { (error) in
-//        if let error = error {
-//            completion(.failure(error))
-//        } else {
-//            completion(.success(()))
-//        }
-//    })
-//}
+func coreFireLogoutAsync(context: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
+    let authUI = FUIAuth.defaultAuthUI()
+    try? authUI?.signOut()
+}
 

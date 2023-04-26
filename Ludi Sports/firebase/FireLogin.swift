@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 import RealmSwift
 
 func fireSyncUserWithDatabase(coreFireUser: User, completion: @escaping (User?) -> Void) {

@@ -28,36 +28,37 @@ class LudiLoginActivity: UIViewController {
         
         auth = Auth.auth()
         
-        hideProgressBar()
+//        hideProgressBar()
         
-        btnLoginSignUp.addTarget(self, action: #selector(launchSignUpActivity), for: .touchUpInside)
-        btnLogin.addTarget(self, action: #selector(doLogin), for: .touchUpInside)
+//        btnLoginSignUp.addTarget(self, action: #selector(launchSignUpActivity), for: .touchUpInside)
+//        btnLogin.addTarget(self, action: #selector(doLogin), for: .touchUpInside)
+//
+//        editPassword.addTarget(self, action: #selector(doLogin), for: .editingDidEndOnExit)
         
-        editPassword.addTarget(self, action: #selector(doLogin), for: .editingDidEndOnExit)
-        
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
+        doLogin()
     }
     
     private func showProgressBar() {
-        loginProgressBar.startAnimating()
+        loginProgressBar?.startAnimating()
     }
     
     private func hideProgressBar() {
-        loginProgressBar.stopAnimating()
+        loginProgressBar?.stopAnimating()
     }
     
     @objc private func doLogin() {
-        showProgressBar()
+//        showProgressBar()
         if isUsernamePasswordValid() {
             checkIfEmailExists()
         } else {
-            hideProgressBar()
+//            hideProgressBar()
         }
     }
     
     private func isUsernamePasswordValid() -> Bool {
-        emailInput = editUsername.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        passwordInput = editPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        emailInput = editUsername?.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "ckrphone@gmail.com"
+        passwordInput = editPassword?.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "allensgay"
         
         if emailInput.isEmpty {
             editUsername.makeRed()
@@ -79,7 +80,7 @@ class LudiLoginActivity: UIViewController {
                 if !signInMethods.isEmpty {
                     self.onSignInResult()
                 } else {
-                    self.hideProgressBar()
+//                    self.hideProgressBar()
 //                    self.launchViewController(type: ProviderLoginActivity.self)
                 }
             } else {
@@ -90,7 +91,7 @@ class LudiLoginActivity: UIViewController {
     
     private func onSignInResult() {
         auth?.signIn(withEmail: emailInput, password: passwordInput, completion: { result, error in
-            self.hideProgressBar()
+//            self.hideProgressBar()
             if let user = result?.user {
                 print("signInWithEmail:success")
                 self.handleFireUserLogin(firebaseUser: user)
@@ -109,12 +110,11 @@ class LudiLoginActivity: UIViewController {
     
     private func saveProfileToFirebaseUI(user: User?) {
         if user == nil {
-            segue("")
+            segue("toAuthController")
         } else {
-            print("todo")
-//            fireSyncUserWithDatabase(user: user!) {
-//                self.launchViewController(type: AuthControllerViewController.self)
-//            }
+            fireSyncUserWithDatabase(coreFireUser: user!) { _ in
+                self.segue("toAuthController")
+            }
         }
     }
     
