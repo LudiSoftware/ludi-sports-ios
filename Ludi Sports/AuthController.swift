@@ -36,9 +36,17 @@ class AuthControllerViewController: UIViewController {
 
     private func navigateUser(_ user: User?) {
         if user == nil {
-            launchViewController(type: AuthControllerViewController.self) // Replace with your method to launch MasterUserActivity
+            return self.performSegue(withIdentifier: "toMainDashboard", sender: self) // Replace with your method to launch MasterUserActivity
         }
-        launchViewController(type: AuthControllerViewController.self) // Replace with your method to launch MasterUserActivity
+        performSegue(withIdentifier: "toMainDashboard", sender: nil) // Replace with your method to launch MasterUserActivity
+    }
+}
+
+extension UIViewController {
+    func performSegue(withIdentifier identifier: String) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: identifier, sender: nil)
+        }
     }
 }
 
