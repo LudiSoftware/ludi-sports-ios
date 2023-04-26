@@ -109,7 +109,7 @@ class LudiLoginActivity: UIViewController {
     
     private func saveProfileToFirebaseUI(user: User?) {
         if user == nil {
-            launchViewController(type: AuthControllerViewController.self)
+            segue("")
         } else {
             print("todo")
 //            fireSyncUserWithDatabase(user: user!) {
