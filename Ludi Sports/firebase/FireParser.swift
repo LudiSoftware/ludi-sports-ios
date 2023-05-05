@@ -35,7 +35,7 @@ extension DataSnapshot {
     func toHashMap() -> [String: Any] {
         var hashMap = [String: Any]()
         for child in children {
-            var c = (child as? DataSnapshot)
+            let c = (child as? DataSnapshot)
             if let key = c?.key {
                 hashMap[key] = c?.value
             }
@@ -50,7 +50,6 @@ extension Dictionary where Key == String, Value == Any {
     func toRealmObject<T: Object>(_ type: T.Type, realm: Realm? = nil) -> T? {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self, options: [])
-            
             if let realm = realm {
                 var object: T?
                 try? realm.write {
@@ -72,17 +71,3 @@ extension Dictionary where Key == String, Value == Any {
         }
     }
 }
-
-
-
-//extension Realm {
-//    func safeWrite<T>(_ block: (Realm) throws -> T) rethrows -> T {
-//        if isInWriteTransaction {
-//            return try block(self)
-//        } else {
-//            beginWrite()
-//            defer { if isInWriteTransaction { cancelWrite() } }
-//            return try block(self)
-//        }
-//    }
-//}

@@ -22,6 +22,7 @@ class AuthControllerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fireGetSportsAsync(realm: realmInstance)
         verifyUserLogin()
     }
     

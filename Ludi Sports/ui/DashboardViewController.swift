@@ -12,6 +12,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("yay!!")
+        
         // Do any additional setup after loading the view.
     }
     

@@ -41,3 +41,4 @@ func coreFireLogoutAsync(context: UIViewController, completion: @escaping (Resul
     try? authUI?.signOut()
 }
 
+/** Firebase Database */

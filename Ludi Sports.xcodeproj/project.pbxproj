@@ -49,6 +49,9 @@
 		FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */; };
 		FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */; };
 		FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556A29F8FA9B000DC692 /* Extensions.swift */; };
+		FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556D29F9D1E9000DC692 /* TeamLiveDat.swift */; };
+		FB41557029FA3004000DC692 /* FireSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41556F29FA3004000DC692 /* FireSports.swift */; };
+		FB41557229FA30CF000DC692 /* FireData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41557129FA30CF000DC692 /* FireData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudiSignUpViewController.swift; sourceTree = "<group>"; };
 		FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderLoginViewController.swift; sourceTree = "<group>"; };
 		FB41556A29F8FA9B000DC692 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FB41556D29F9D1E9000DC692 /* TeamLiveDat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLiveDat.swift; sourceTree = "<group>"; };
+		FB41556F29FA3004000DC692 /* FireSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireSports.swift; sourceTree = "<group>"; };
+		FB41557129FA30CF000DC692 /* FireData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +220,7 @@
 		FB06D76229F751BF00E2E26B /* providers */ = {
 			isa = PBXGroup;
 			children = (
+				FB41556C29F9D1D4000DC692 /* LiveData */,
 				FB06D76529F751E400E2E26B /* ModeProvider.swift */,
 			);
 			path = providers;
@@ -225,6 +232,8 @@
 				FB06D76F29F866FC00E2E26B /* FireCore.swift */,
 				FB06D77429F875D900E2E26B /* FireLogin.swift */,
 				FB06D77629F8774B00E2E26B /* FireParser.swift */,
+				FB41556F29FA3004000DC692 /* FireSports.swift */,
+				FB41557129FA30CF000DC692 /* FireData.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -264,6 +273,14 @@
 				FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		FB41556C29F9D1D4000DC692 /* LiveData */ = {
+			isa = PBXGroup;
+			children = (
+				FB41556D29F9D1E9000DC692 /* TeamLiveDat.swift */,
+			);
+			path = LiveData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,11 +410,13 @@
 				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
 				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
+				FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */,
 				FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */,
 				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
 				FB06D77029F866FC00E2E26B /* FireCore.swift in Sources */,
 				FB06D75329F74A8F00E2E26B /* Chat.swift in Sources */,
 				FB06D75129F74A8D00E2E26B /* TryOut.swift in Sources */,
+				FB41557029FA3004000DC692 /* FireSports.swift in Sources */,
 				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
 				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
 				FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */,
@@ -408,6 +427,7 @@
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
+				FB41557229FA30CF000DC692 /* FireData.swift in Sources */,
 				FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */,
 				FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */,
 				FB06D73E29F70FBA00E2E26B /* User.swift in Sources */,
