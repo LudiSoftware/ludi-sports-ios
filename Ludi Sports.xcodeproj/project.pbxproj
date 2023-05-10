@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
+		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
+		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
+		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
+		78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */; };
 		FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71C29F7029E00E2E26B /* AppDelegate.swift */; };
 		FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */; };
 		FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72229F7029E00E2E26B /* Main.storyboard */; };
@@ -55,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
+		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
+		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
+		78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ludi_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98E4A186E52EEF5BC87B8E /* Pods-Ludi Sports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.release.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.release.xcconfig"; sourceTree = "<group>"; };
 		BB0027EB78E0697BF0701676 /* Pods-Ludi Sports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.debug.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +73,7 @@
 		FB06D72529F7029F00E2E26B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB06D72829F7029F00E2E26B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB06D72A29F7029F00E2E26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB06D73529F7075F00E2E26B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB06D73529F7075F00E2E26B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB06D73729F7086F00E2E26B /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		FB06D73B29F7098E00E2E26B /* RealmInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInstance.swift; sourceTree = "<group>"; };
 		FB06D73D29F70FBA00E2E26B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -133,6 +141,17 @@
 				A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78F51E262A0C12E7003D83A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78F51E272A0C12F7003D83A0 /* SportTableView.swift */,
+				78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */,
+				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
+				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FB06D71029F7029E00E2E26B = {
@@ -241,6 +260,7 @@
 		FB06D76429F751CD00E2E26B /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				78F51E262A0C12E7003D83A0 /* Views */,
 				FB06D77129F8743D00E2E26B /* login */,
 				FB06D77A29F87EBE00E2E26B /* DashboardViewController.swift */,
 			);
@@ -410,6 +430,7 @@
 				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
 				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
+				78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */,
 				FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */,
 				FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */,
 				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
@@ -419,9 +440,12 @@
 				FB41557029FA3004000DC692 /* FireSports.swift in Sources */,
 				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
 				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
+				78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */,
+				78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */,
 				FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */,
 				FB06D77529F875D900E2E26B /* FireLogin.swift in Sources */,
 				FB06D75929F74AD400E2E26B /* League.swift in Sources */,
+				78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */,
 				FB06D76E29F7547A00E2E26B /* RosterSession.swift in Sources */,
 				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
@@ -591,7 +615,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8F2V733KGD;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ludi Sports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -620,7 +644,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8F2V733KGD;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ludi Sports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
