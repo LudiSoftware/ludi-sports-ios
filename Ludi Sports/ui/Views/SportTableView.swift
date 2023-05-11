@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Realm
+import RealmSwift
 
 
 class SportTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
@@ -14,8 +16,12 @@ class SportTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     var sports: [Sport] = []
     var dashboardViewController: DashboardViewController? = nil
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        firebaseDatabase(collection: DatabasePaths.sports.rawValue)
         
         var sport: Sport = Sport()
         sport.name = "Soccer"
