@@ -10,6 +10,9 @@ import UIKit
 import FirebaseAuth
 import FirebaseEmailAuthUI
 import FirebaseGoogleAuthUI
+import Realm
+import RealmSwift
+
 
 class ProviderLoginViewController: UIViewController, FUIAuthDelegate {
     
@@ -17,6 +20,9 @@ class ProviderLoginViewController: UIViewController, FUIAuthDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let realm = try! Realm()
+        fireGetSportsAsync(realm: realm)
         
         let providers: [FUIAuthProvider] = [
             FUIEmailAuth(),

@@ -7,30 +7,54 @@
 
 import Foundation
 import UIKit
-import Realm
 import RealmSwift
+import FirebaseDatabase
+import Realm
+
 
 
 class SportTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
+    
+    var newRealmInstance = realm()
+//    var sportsObj: Results<Sport>
     var sports: [Sport] = []
     var dashboardViewController: DashboardViewController? = nil
-    
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        firebaseDatabase(collection: DatabasePaths.sports.rawValue)
+       getSports()
         
-        var sport: Sport = Sport()
-        sport.name = "Soccer"
-        var sport2: Sport = Sport()
-        sport2.name = "Football"
         
-        self.sports.append(sport)
-        self.sports.append(sport2)
+        
+//        var sports = self.newRealmInstance.object(ofType: Sport.self, forPrimaryKey: (Any).self)
+//        }
+        var tempSports = self.newRealmInstance.findAllSports()
+       // var tempSportsUnwrapped = tempSports
+       // self.sports.append(tempSportsUnwrapped!)
+//        let sportsNames: [Sport]? = tempSports?.toArray(Sport.self)
 
+        // Unwrap the optional [Sport]? using optional binding
+//        if let unwrappedSportsNames = sportsNames {
+//            // The optional [Sport] is not nil, proceed with appending its elements to `self.sports`
+//
+//            for sport in unwrappedSportsNames {
+//                // Iterate through each sport in the unwrapped [Sport]
+//                self.sports.append(sport)
+//            }
+//
+            // At this point, `self.sports` will contain all the appended sports
+            // You can use `self.sports` to populate your tableView
+//        }
+        
+        
+        
+        
+        
+        
+//        self.team.append(self.newRealmInstance.findTeamById(teamId: <#T##String?#>))
         
         dataSource = self
         delegate = self
@@ -50,5 +74,14 @@ class SportTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
        
+    }
+    
+    func getSports() {
+        var realm: Realm!
+             var objectsArray: Results<Sport> {
+                get {
+                    return realm.objects(Sport.self)
+                }
+            }
     }
 }

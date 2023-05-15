@@ -12,6 +12,7 @@
 		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
 		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
 		78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */; };
+		78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */; };
 		FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71C29F7029E00E2E26B /* AppDelegate.swift */; };
 		FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */; };
 		FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72229F7029E00E2E26B /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
 		78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireTeam.swift; sourceTree = "<group>"; };
 		A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ludi_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98E4A186E52EEF5BC87B8E /* Pods-Ludi Sports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.release.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.release.xcconfig"; sourceTree = "<group>"; };
 		BB0027EB78E0697BF0701676 /* Pods-Ludi Sports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.debug.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.debug.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				FB06D77629F8774B00E2E26B /* FireParser.swift */,
 				FB41556F29FA3004000DC692 /* FireSports.swift */,
 				FB41557129FA30CF000DC692 /* FireData.swift */,
+				78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				FB06D75729F74A9200E2E26B /* Organization.swift in Sources */,
 				FB06D74729F7110C00E2E26B /* Parent.swift in Sources */,
 				FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */,
+				78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */,
 				FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */,
 				FB06D77B29F87EBE00E2E26B /* DashboardViewController.swift in Sources */,
 			);

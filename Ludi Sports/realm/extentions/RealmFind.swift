@@ -92,5 +92,14 @@ extension Realm {
             block(tryout)
         }
     }
+    func findAllSports() -> Sport? {
+        var test = self.objects(Sport.self).first
+        return test
+    }
+
+    func findSportByName(name: String) -> Sport? {
+        return self.objects(Sport.self).filter("name == %@", name).first
+    }
+
 }
 

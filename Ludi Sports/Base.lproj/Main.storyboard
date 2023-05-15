@@ -133,6 +133,7 @@
                     <navigationItem key="navigationItem" id="Y5S-Id-ciG"/>
                     <connections>
                         <outlet property="sportTableView" destination="iCQ-T8-iYs" id="Yj9-Ng-JWz"/>
+                        <outlet property="teamTableView" destination="hst-m3-oVy" id="NQi-eQ-2vi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCU-Sc-gaW" sceneMemberID="firstResponder"/>

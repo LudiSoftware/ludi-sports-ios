@@ -10,16 +10,21 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
-    @IBOutlet weak var sportTableView: UITableView!
+    @IBOutlet weak var sportTableView: SportTableView!
+    @IBOutlet weak var teamTableView: TeamTableView!
     
+ //   var teams: [Team] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("yay!!")
         
-        var generic1 = Sport()
+//        var generic1 = Sport()
+//        var newRealmInstance = realm()
         
         
+        
+        teamTableView.reloadData()
         sportTableView.reloadData()
         // Do any additional setup after loading the view.
         

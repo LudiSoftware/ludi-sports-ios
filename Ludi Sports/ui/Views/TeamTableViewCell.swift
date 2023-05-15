@@ -14,9 +14,9 @@ class  TeamTableViewCell: UITableViewCell {
     @IBOutlet weak var teamLabel: UILabel!
   
     
-    func configure(with teams: Team) {
+    func configure(with teams: String) {
        
-        teamLabel.text = teams.name
+        teamLabel.text = teams
         }
     
 }

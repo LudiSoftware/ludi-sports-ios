@@ -4,6 +4,12 @@
 //
 //  Created by Charles Romeo on 4/25/23.
 //
+//
+//  FireParser.swift
+//  Ludi Sports
+//
+//  Created by Charles Romeo on 4/25/23.
+//
 
 import Foundation
 import FirebaseDatabase
@@ -13,7 +19,7 @@ import RealmSwift
 extension DataSnapshot {
     func toLudiObject<T: Object>(_ type: T.Type, realm: Realm? = nil) -> T? {
         let hashmap = self.toHashMap()
-        return hashmap.toRealmObject(type, realm: realm)
+        return hashmap.toRealmObject(type, realmParameter: realm)
     }
 
     // The Master List Of Firebase Objects Parser
@@ -22,7 +28,7 @@ extension DataSnapshot {
         let list = List<T>()
         for (_, value) in hashmap {
             if let tempHash = value as? [String: Any] {
-                let temp: T? = tempHash.toRealmObject(type, realm: realm)
+                let temp: T? = tempHash.toRealmObject(type, realmParameter: realm)
                 if let itTemp = temp {
                     list.append(itTemp)
                 }
@@ -47,27 +53,23 @@ extension DataSnapshot {
 // Master Universal Realm Parser
 
 extension Dictionary where Key == String, Value == Any {
-    func toRealmObject<T: Object>(_ type: T.Type, realm: Realm? = nil) -> T? {
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: self, options: [])
-            if let realm = realm {
-                var object: T?
-                try? realm.write {
-                    object = realm.create(type, value: jsonData, update: .all)
+    func toRealmObject<T: Object>(_ type: T.Type, realmParameter: Realm? = nil) -> T? {
+            do {
+                if let realm = realmParameter {
+                    var object: T?
+                    try? realm.write {
+                        object = realm.create(type, value: self, update: .all)
+                    }
+                    return object
+                } else {
+                    let realm = realm()
+                    var object: T?
+                    try? realm.write {
+                        object = realm.create(type, value: self, update: .all)
+                    }
+                    return object
                 }
-                return object
-            } else {
-                let realm = try Realm()
-                var object: T?
-                try? realm.write {
-                    object = realm.create(type, value: jsonData, update: .all)
-                }
-                return object
+                
             }
-            
-        } catch {
-            print("Error creating realm object from JSON: \(error)")
-            return nil
         }
-    }
 }
