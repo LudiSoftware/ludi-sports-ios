@@ -23,7 +23,7 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     
     var coach = Coach()
-    var newRealmInstance = realm()
+    var realmInstance = realm()
     var teams: [String] = []
     var dashboardViewController: DashboardViewController? = nil
     var coachTeams: [Team] = []
@@ -31,26 +31,8 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         //TODO get an id for Coach to test if it is pulling properly
-        
-        
-        
-        
         var team2 = "AFC Richmond"
-        var coach = self.newRealmInstance.findCoachBySafeId()
-        
-        if let coachObj = coach {
-            print("fucker")
-            var tempTeamIds: [String] = []
-            for id in coachObj.teams {
-                teams.append(id)
-            }
-            
-            
-            
-        } else {
-            var teams = team2
-            self.teams.append(team2)
-        }
+        var coach = realmInstance.findCoachBySafeId()
         
         
         

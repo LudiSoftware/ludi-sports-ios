@@ -14,6 +14,7 @@ func fireGetSportsAsync(realm: Realm) {
     firebaseDatabase(collection: DatabasePaths.sports.rawValue) { ref in
         ref.observeSingleEvent(of: .value) { snapshot, _ in
             var _ = snapshot.toLudiObjects(Sport.self)
+           
         }
     }
     

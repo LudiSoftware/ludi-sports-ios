@@ -92,9 +92,10 @@ extension Realm {
             block(tryout)
         }
     }
-    func findAllSports() -> Sport? {
-        var test = self.objects(Sport.self).first
-        return test
+    func findAllSports() -> Results<Sport>? {
+        var testObjs = objects(Sport.self)
+        print(testObjs)
+        return testObjs
     }
 
     func findSportByName(name: String) -> Sport? {

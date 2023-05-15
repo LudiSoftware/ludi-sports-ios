@@ -59,6 +59,7 @@ extension Dictionary where Key == String, Value == Any {
                     var object: T?
                     try? realm.write {
                         object = realm.create(type, value: self, update: .all)
+                        realm.refresh()
                     }
                     return object
                 } else {
@@ -66,6 +67,7 @@ extension Dictionary where Key == String, Value == Any {
                     var object: T?
                     try? realm.write {
                         object = realm.create(type, value: self, update: .all)
+                        realm.refresh()
                     }
                     return object
                 }

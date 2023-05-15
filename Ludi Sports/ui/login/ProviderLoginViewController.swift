@@ -21,9 +21,6 @@ class ProviderLoginViewController: UIViewController, FUIAuthDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let realm = try! Realm()
-        fireGetSportsAsync(realm: realm)
-        
         let providers: [FUIAuthProvider] = [
             FUIEmailAuth(),
             FUIGoogleAuth()
