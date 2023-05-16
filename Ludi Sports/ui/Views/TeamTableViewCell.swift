@@ -11,12 +11,21 @@ import UIKit
 class  TeamTableViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var coachNameLabel: UILabel!
     @IBOutlet weak var teamLabel: UILabel!
   
+    @IBOutlet weak var teamImage: UIImageView!
+    @IBOutlet weak var teamAgeBracket: UILabel!
     
-    func configure(with teams: String) {
+    
+    
+    func configure(with teams: Team) {
        
-        teamLabel.text = teams
+        
+//        coachNameLabel.text = teams.headCoachName
+//        teamAgeBracket.text = teams.ageGroup
+        teamLabel.text = teams.name
+    
         }
     
 }

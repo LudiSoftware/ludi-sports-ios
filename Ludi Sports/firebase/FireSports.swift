@@ -19,3 +19,5 @@ func fireGetSportsAsync(realm: Realm) {
     }
     
 }
+
+

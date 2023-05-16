@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
+		782483CE2A13303F00C78173 /* FireCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CD2A13303F00C78173 /* FireCoach.swift */; };
+		782483D02A13322B00C78173 /* FireUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CF2A13322B00C78173 /* FireUser.swift */; };
 		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
 		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
 		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
 		78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */; };
 		78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */; };
+		78FEAC782A1420920013C929 /* teamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEAC762A1420920013C929 /* teamCell.swift */; };
+		78FEAC792A1420920013C929 /* teamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEAC772A1420920013C929 /* teamCell.xib */; };
 		FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71C29F7029E00E2E26B /* AppDelegate.swift */; };
 		FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */; };
 		FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72229F7029E00E2E26B /* Main.storyboard */; };
@@ -60,11 +64,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		782483CD2A13303F00C78173 /* FireCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCoach.swift; sourceTree = "<group>"; };
+		782483CF2A13322B00C78173 /* FireUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireUser.swift; sourceTree = "<group>"; };
 		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
 		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
 		78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireTeam.swift; sourceTree = "<group>"; };
+		78FEAC762A1420920013C929 /* teamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamCell.swift; sourceTree = "<group>"; };
+		78FEAC772A1420920013C929 /* teamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teamCell.xib; sourceTree = "<group>"; };
 		A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ludi_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98E4A186E52EEF5BC87B8E /* Pods-Ludi Sports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.release.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.release.xcconfig"; sourceTree = "<group>"; };
 		BB0027EB78E0697BF0701676 /* Pods-Ludi Sports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.debug.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +160,8 @@
 				78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */,
 				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
 				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
+				78FEAC762A1420920013C929 /* teamCell.swift */,
+				78FEAC772A1420920013C929 /* teamCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +266,8 @@
 				FB41556F29FA3004000DC692 /* FireSports.swift */,
 				FB41557129FA30CF000DC692 /* FireData.swift */,
 				78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */,
+				782483CD2A13303F00C78173 /* FireCoach.swift */,
+				782483CF2A13322B00C78173 /* FireUser.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -375,6 +387,7 @@
 			files = (
 				FB06D72929F7029F00E2E26B /* LaunchScreen.storyboard in Resources */,
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
+				78FEAC792A1420920013C929 /* teamCell.xib in Resources */,
 				FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */,
 				FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */,
 			);
@@ -453,8 +466,10 @@
 				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
+				78FEAC782A1420920013C929 /* teamCell.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
 				FB41557229FA30CF000DC692 /* FireData.swift in Sources */,
+				782483D02A13322B00C78173 /* FireUser.swift in Sources */,
 				FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */,
 				FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */,
 				FB06D73E29F70FBA00E2E26B /* User.swift in Sources */,
@@ -463,6 +478,7 @@
 				FB06D74329F710DD00E2E26B /* DateTime.swift in Sources */,
 				FB06D75B29F74AD500E2E26B /* Service.swift in Sources */,
 				FB06D74929F7111500E2E26B /* Player.swift in Sources */,
+				782483CE2A13303F00C78173 /* FireCoach.swift in Sources */,
 				FB06D74529F7110300E2E26B /* Coach.swift in Sources */,
 				FB06D76129F74AFF00E2E26B /* CustomAttribute.swift in Sources */,
 				FB06D76C29F7547600E2E26B /* TeamSession.swift in Sources */,

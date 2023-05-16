@@ -14,16 +14,15 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var teamTableView: TeamTableView!
     
     var realmInstance = realm()
- //   var teams: [Team] = []
+     var teams: [Team] = []
+    var coach: Coach? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("yay!!")
-        
-//        var testObjs = realmInstance.findAllSports()
-//        var test2 = testObjs?.toList()
-        
-        
+//        teamTableView.register(teamCell.self, forCellReuseIdentifier: "teamCell")
+         coach = realmInstance.findCoachBySafeId()
+
         
         
         teamTableView.reloadData()

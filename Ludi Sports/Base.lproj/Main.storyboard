@@ -94,7 +94,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="teamLabel" destination="Xio-n1-zum" id="WcJ-Yw-JsV"/>
+                                            <outlet property="teamLabel" destination="Xio-n1-zum" id="j7M-PT-BZh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
