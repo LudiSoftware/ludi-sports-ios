@@ -15,8 +15,8 @@
 		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
 		78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */; };
 		78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */; };
-		78FEAC782A1420920013C929 /* teamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEAC762A1420920013C929 /* teamCell.swift */; };
-		78FEAC792A1420920013C929 /* teamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEAC772A1420920013C929 /* teamCell.xib */; };
+		78FEAC7C2A148EC60013C929 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEAC7A2A148EC60013C929 /* TeamCell.swift */; };
+		78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEAC7B2A148EC60013C929 /* TeamCell.xib */; };
 		FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71C29F7029E00E2E26B /* AppDelegate.swift */; };
 		FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */; };
 		FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72229F7029E00E2E26B /* Main.storyboard */; };
@@ -71,8 +71,8 @@
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
 		78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireTeam.swift; sourceTree = "<group>"; };
-		78FEAC762A1420920013C929 /* teamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamCell.swift; sourceTree = "<group>"; };
-		78FEAC772A1420920013C929 /* teamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teamCell.xib; sourceTree = "<group>"; };
+		78FEAC7A2A148EC60013C929 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		78FEAC7B2A148EC60013C929 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ludi_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98E4A186E52EEF5BC87B8E /* Pods-Ludi Sports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.release.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.release.xcconfig"; sourceTree = "<group>"; };
 		BB0027EB78E0697BF0701676 /* Pods-Ludi Sports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.debug.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */,
 				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
 				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
-				78FEAC762A1420920013C929 /* teamCell.swift */,
-				78FEAC772A1420920013C929 /* teamCell.xib */,
+				78FEAC7A2A148EC60013C929 /* TeamCell.swift */,
+				78FEAC7B2A148EC60013C929 /* TeamCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,8 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB06D72929F7029F00E2E26B /* LaunchScreen.storyboard in Resources */,
+				78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */,
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
-				78FEAC792A1420920013C929 /* teamCell.xib in Resources */,
 				FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */,
 				FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */,
 			);
@@ -456,6 +456,7 @@
 				FB41557029FA3004000DC692 /* FireSports.swift in Sources */,
 				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
 				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
+				78FEAC7C2A148EC60013C929 /* TeamCell.swift in Sources */,
 				78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */,
 				78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */,
 				FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */,
@@ -466,7 +467,6 @@
 				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
-				78FEAC782A1420920013C929 /* teamCell.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
 				FB41557229FA30CF000DC692 /* FireData.swift in Sources */,
 				782483D02A13322B00C78173 /* FireUser.swift in Sources */,

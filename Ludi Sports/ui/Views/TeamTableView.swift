@@ -34,6 +34,7 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         //var team2 = "AFC Richmond"
         //teamsList.append(team2)
         
+        
         coach = realmInstance.findCoachBySafeId()
         
         if let coachObj = coach {
