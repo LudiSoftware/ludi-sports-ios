@@ -10,17 +10,32 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
+    @IBOutlet weak var welcomeUser: UILabel!
+    @IBOutlet weak var welcomeImage: UIImageView!
     @IBOutlet weak var sportTableView: SportTableView!
     @IBOutlet weak var teamTableView: TeamTableView!
     
     var realmInstance = realm()
      var teams: [Team] = []
     var coach: Coach? = nil
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("yay!!")
-//        teamTableView.register(teamCell.self, forCellReuseIdentifier: "teamCell")
+        
+        //welcomeImage.image = "Here lies an image."
+        
+        if let name = realmInstance.realmUser()?.name{
+            welcomeUser.text = "Welcome, \(name)"
+        } else {
+            welcomeUser.text = "Welcome, Loser."
+        }
+        
+        
+        teamTableView.rowHeight = UITableView.automaticDimension
+        teamTableView.estimatedRowHeight = 600
+
          coach = realmInstance.findCoachBySafeId()
 
         

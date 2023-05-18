@@ -34,22 +34,36 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         //var team2 = "AFC Richmond"
         //teamsList.append(team2)
         
-        
         coach = realmInstance.findCoachBySafeId()
-        
-        if let coachObj = coach {
+//
+//        if let coachObj = coach {
+//            let teamsOfCoach = coachObj.teams
+//            for team in teamsOfCoach {
+//                fireGetTeamsAsync(teamId: team, realm: realmInstance)
+//                teamIdList.append(team)
+//
+//            }
+//            for id in teamIdList {
+//                if let team = realmInstance.findTeamById(teamId: id) {
+//                    teams.append(team)
+//                    print(team)
+//                }
+                
+        if let coachObj = self.coach {
             let teamsOfCoach = coachObj.teams
             for team in teamsOfCoach {
-                fireGetTeamsAsync(teamId: team, realm: realmInstance)
-                teamIdList.append(team)
-               
+                fireGetTeamsAsync(teamId: team, realm: self.realmInstance)
+                self.teamIdList.append(team)
+                
             }
-            for id in teamIdList {
-                if let team = realmInstance.findTeamById(teamId: id) {
-                    teams.append(team)
+            for id in self.teamIdList {
+                if let team = self.realmInstance.findTeamById(teamId: id) {
+                    self.teams.append(team)
                     print(team)
+                        
                 }
             }
+            
         }
         
         
@@ -64,9 +78,19 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "teamTableViewCell", for: indexPath) as! TeamTableViewCell
-        let teams: Team = teams[indexPath.row]
-        cell.configure(with: teams)
+        let reuseIdentifier = "teamCell"
+        
+        // Register the custom nib file
+        tableView.register(UINib(nibName: "TeamCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        
+        // Dequeue the cell using the registered identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! TeamCell
+        
+        // Configure the cell with the corresponding team object
+        let team = teams[indexPath.row]
+        cell.configure(with: team)
+        
+        
         return cell
     }
     
@@ -74,4 +98,14 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         
        
     }
-}
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20.0 // Adjust the value according to the desired spacing
+        }
+
+        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let headerView = UIView()
+            headerView.backgroundColor = .clear
+            return headerView
+        }
+    }
+
