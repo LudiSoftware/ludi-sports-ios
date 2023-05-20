@@ -20,6 +20,7 @@ import FirebaseDatabase
 import RealmSwift
 
 
+
 class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     let realmInstance = realm()
@@ -29,26 +30,13 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        //var team2 = "AFC Richmond"
-        //teamsList.append(team2)
+        
         
         coach = realmInstance.findCoachBySafeId()
-//
-//        if let coachObj = coach {
-//            let teamsOfCoach = coachObj.teams
-//            for team in teamsOfCoach {
-//                fireGetTeamsAsync(teamId: team, realm: realmInstance)
-//                teamIdList.append(team)
-//
-//            }
-//            for id in teamIdList {
-//                if let team = realmInstance.findTeamById(teamId: id) {
-//                    teams.append(team)
-//                    print(team)
-//                }
-                
+        
         if let coachObj = self.coach {
             let teamsOfCoach = coachObj.teams
             for team in teamsOfCoach {
@@ -56,13 +44,9 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
                 self.teamIdList.append(team)
                 
             }
-            for id in self.teamIdList {
-                if let team = self.realmInstance.findTeamById(teamId: id) {
-                    self.teams.append(team)
-                    print(team)
-                        
-                }
-            }
+            //live data
+            let teamLiveData = TeamLiveData(realmIds: teamIdList, realmInstance: realmInstance, fun: completion)
+            teamLiveData.enable()
             
         }
         
@@ -74,6 +58,19 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return teams.count
+        
+    }
+    
+    func completion()  {
+        //making variable teamsList to be Results<Team>
+        let teamsList = realmInstance.objects(Team.self)
+        //Turning Results<Team> into a [Team]
+        teams = Array(teamsList)
+        
+        
+        DispatchQueue.main.async {
+            self.reloadData()
+        }
         
     }
     
@@ -95,17 +92,56 @@ class TeamTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get the selected team object
+        let selectedTeam = teams[indexPath.row]
+        print(selectedTeam)
+        //potentially good time to stop observing
         
-       
+        let teamLiveData = TeamLiveData(realmIds: teamIdList, realmInstance: realmInstance, fun: completion)
+        teamLiveData.disable()
+        print("You have no observers here.")
+        
+        // Perform the segue with identifier
+        if let dashboardViewController = findParentViewController() as? DashboardViewController {
+                // Perform the segue with identifier
+                dashboardViewController.performSegue(withIdentifier: "goToTeamOverAll", sender: selectedTeam)
+            }
+        
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20.0 // Adjust the value according to the desired spacing
-        }
-
-        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-            let headerView = UIView()
-            headerView.backgroundColor = .clear
-            return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .clear
+        return headerView
+    }
+    
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "YourSegueIdentifier" {
+            // Check if the destination view controller is of the appropriate type
+            if let destinationVC = segue.destination as? TeamOverAllViewController {
+                // Retrieve the selected team object from the sender
+                if let selectedTeam = sender as? Team {
+                    // Pass the selected team object to the destination view controller
+                    destinationVC.team = selectedTeam
+                }
+            }
         }
     }
+    func findParentViewController() -> UIViewController? {
+        var parentResponder: UIResponder? = self
+        while let responder = parentResponder {
+            if let viewController = responder as? UIViewController {
+                return viewController
+            }
+            parentResponder = responder.next
+        }
+        return nil
+    }
+    
+}
+
 

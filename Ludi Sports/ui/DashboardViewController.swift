@@ -48,6 +48,19 @@ class DashboardViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "goToTeamOverAll" {
+                // Check if the destination view controller is of the appropriate type
+                if let destinationVC = segue.destination as? TeamOverAllViewController {
+                    // Retrieve the selected team object from the sender
+                    if let selectedTeam = sender as? Team {
+                        // Pass the selected team object to the destination view controller
+                        destinationVC.team = selectedTeam
+                    }
+                }
+            }
+        }
+    
 
     /*
     // MARK: - Navigation
@@ -58,5 +71,5 @@ class DashboardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

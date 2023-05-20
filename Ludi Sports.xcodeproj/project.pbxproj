@@ -10,10 +10,16 @@
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
 		782483CE2A13303F00C78173 /* FireCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CD2A13303F00C78173 /* FireCoach.swift */; };
 		782483D02A13322B00C78173 /* FireUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CF2A13322B00C78173 /* FireUser.swift */; };
+		785738E62A1699B8000D7D53 /* TeamOverAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */; };
+		785738E92A169F29000D7D53 /* PlayerCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785738E72A169F29000D7D53 /* PlayerCCell.swift */; };
+		785738EA2A169F29000D7D53 /* PlayerCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785738E82A169F29000D7D53 /* PlayerCCell.xib */; };
+		785738EC2A1763E7000D7D53 /* tabBarControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785738EB2A1763E7000D7D53 /* tabBarControllerMain.swift */; };
+		78966C242A17F76700583279 /* TeamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C232A17F76700583279 /* TeamRosterViewController.swift */; };
+		78966C262A1804B000583279 /* FireRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C252A1804B000583279 /* FireRoster.swift */; };
+		78966C282A185D5800583279 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C272A185D5800583279 /* MainPageViewController.swift */; };
 		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
 		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
 		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
-		78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */; };
 		78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */; };
 		78FEAC7C2A148EC60013C929 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEAC7A2A148EC60013C929 /* TeamCell.swift */; };
 		78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEAC7B2A148EC60013C929 /* TeamCell.xib */; };
@@ -66,10 +72,16 @@
 /* Begin PBXFileReference section */
 		782483CD2A13303F00C78173 /* FireCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCoach.swift; sourceTree = "<group>"; };
 		782483CF2A13322B00C78173 /* FireUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireUser.swift; sourceTree = "<group>"; };
+		785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverAllViewController.swift; sourceTree = "<group>"; };
+		785738E72A169F29000D7D53 /* PlayerCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCCell.swift; sourceTree = "<group>"; };
+		785738E82A169F29000D7D53 /* PlayerCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCCell.xib; sourceTree = "<group>"; };
+		785738EB2A1763E7000D7D53 /* tabBarControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarControllerMain.swift; sourceTree = "<group>"; };
+		78966C232A17F76700583279 /* TeamRosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRosterViewController.swift; sourceTree = "<group>"; };
+		78966C252A1804B000583279 /* FireRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireRoster.swift; sourceTree = "<group>"; };
+		78966C272A185D5800583279 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
 		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
-		78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireTeam.swift; sourceTree = "<group>"; };
 		78FEAC7A2A148EC60013C929 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		78FEAC7B2A148EC60013C929 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
@@ -159,9 +171,11 @@
 				78F51E272A0C12F7003D83A0 /* SportTableView.swift */,
 				78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */,
 				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
-				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
 				78FEAC7A2A148EC60013C929 /* TeamCell.swift */,
 				78FEAC7B2A148EC60013C929 /* TeamCell.xib */,
+				785738E72A169F29000D7D53 /* PlayerCCell.swift */,
+				785738E82A169F29000D7D53 /* PlayerCCell.xib */,
+				785738EB2A1763E7000D7D53 /* tabBarControllerMain.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +282,7 @@
 				78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */,
 				782483CD2A13303F00C78173 /* FireCoach.swift */,
 				782483CF2A13322B00C78173 /* FireUser.swift */,
+				78966C252A1804B000583279 /* FireRoster.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -278,6 +293,9 @@
 				78F51E262A0C12E7003D83A0 /* Views */,
 				FB06D77129F8743D00E2E26B /* login */,
 				FB06D77A29F87EBE00E2E26B /* DashboardViewController.swift */,
+				78966C272A185D5800583279 /* MainPageViewController.swift */,
+				785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */,
+				78966C232A17F76700583279 /* TeamRosterViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -389,6 +407,7 @@
 				78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */,
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
 				FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */,
+				785738EA2A169F29000D7D53 /* PlayerCCell.xib in Resources */,
 				FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,15 +465,16 @@
 				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
 				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
-				78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */,
 				FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */,
 				FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */,
 				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
+				78966C242A17F76700583279 /* TeamRosterViewController.swift in Sources */,
 				FB06D77029F866FC00E2E26B /* FireCore.swift in Sources */,
 				FB06D75329F74A8F00E2E26B /* Chat.swift in Sources */,
 				FB06D75129F74A8D00E2E26B /* TryOut.swift in Sources */,
 				FB41557029FA3004000DC692 /* FireSports.swift in Sources */,
 				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
+				785738E92A169F29000D7D53 /* PlayerCCell.swift in Sources */,
 				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
 				78FEAC7C2A148EC60013C929 /* TeamCell.swift in Sources */,
 				78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */,
@@ -469,7 +489,9 @@
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
 				FB41557229FA30CF000DC692 /* FireData.swift in Sources */,
+				78966C262A1804B000583279 /* FireRoster.swift in Sources */,
 				782483D02A13322B00C78173 /* FireUser.swift in Sources */,
+				785738E62A1699B8000D7D53 /* TeamOverAllViewController.swift in Sources */,
 				FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */,
 				FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */,
 				FB06D73E29F70FBA00E2E26B /* User.swift in Sources */,
@@ -483,10 +505,12 @@
 				FB06D76129F74AFF00E2E26B /* CustomAttribute.swift in Sources */,
 				FB06D76C29F7547600E2E26B /* TeamSession.swift in Sources */,
 				FB06D75729F74A9200E2E26B /* Organization.swift in Sources */,
+				785738EC2A1763E7000D7D53 /* tabBarControllerMain.swift in Sources */,
 				FB06D74729F7110C00E2E26B /* Parent.swift in Sources */,
 				FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */,
 				78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */,
 				FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */,
+				78966C282A185D5800583279 /* MainPageViewController.swift in Sources */,
 				FB06D77B29F87EBE00E2E26B /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,7 +4,7 @@
 //
 //  Created by Michael Zanaty on 5/16/23.
 //
-
+//text gets cutoff for some reason
 import UIKit
 
 class TeamCell: UITableViewCell {
@@ -14,6 +14,7 @@ class TeamCell: UITableViewCell {
     @IBOutlet weak var teamAgeGroup: UILabel!
     @IBOutlet weak var teamImage: UIImageView!
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
         contentView.autoresizingMask = [.flexibleHeight]
