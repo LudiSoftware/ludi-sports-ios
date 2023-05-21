@@ -26,25 +26,25 @@ class TeamRosterViewController: UIViewController, UICollectionViewDataSource, UI
         }
        
         // Configure collection view layout
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 100, height: 100)
-        
-        // Initialize collection view with layout
-        rosterCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
-        
-        // Set data source and delegate to the view controller
-        rosterCollectionView.dataSource = self
-        rosterCollectionView.delegate = self
-        
-        // Register cell class for reuse
-        rosterCollectionView.register(PlayerCollectionViewCell.self, forCellWithReuseIdentifier: "PlayerCell")
-        
-        // Add collection view to the view hierarchy
-        view.addSubview(rosterCollectionView)
-        
-        // Reload collection view data
-        rosterCollectionView.reloadData()
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .vertical
+//        layout.itemSize = CGSize(width: 100, height: 100)
+//
+//        // Initialize collection view with layout
+//        rosterCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+//
+//        // Set data source and delegate to the view controller
+//        rosterCollectionView.dataSource = self
+//        rosterCollectionView.delegate = self
+//
+//        // Register cell class for reuse
+//        rosterCollectionView.register(PlayerCCell.self, forCellWithReuseIdentifier: "playerCCell")
+//
+//        // Add collection view to the view hierarchy
+//        view.addSubview(rosterCollectionView)
+//
+//        // Reload collection view data
+//        rosterCollectionView.reloadData()
     }
     
     // MARK: - UICollectionViewDataSource
@@ -72,9 +72,3 @@ class TeamRosterViewController: UIViewController, UICollectionViewDataSource, UI
     }
 }
 
-// Example player struct for demonstration purposes
-
-// Example collection view cell class for player display
-class PlayerCollectionViewCell: UICollectionViewCell {
-    
-}

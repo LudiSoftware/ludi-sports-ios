@@ -7,7 +7,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -245,43 +244,33 @@
                                     <constraint firstAttribute="width" constant="361" id="qbg-qP-PfE"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XkF-mu-PJ0">
-                                <rect key="frame" x="16" y="291" width="361" height="531"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z0e-vU-V6b">
-                                    <size key="itemSize" width="170" height="120"/>
-                                    <size key="estimatedItemSize" width="170" height="120"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playerCCell" id="AVR-i3-Ior" customClass="PlayerCCell" customModule="Ludi_Sports" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="syk-55-wXf">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-4s-PNq">
+                                <rect key="frame" x="16" y="287" width="361" height="535"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="535" id="sNR-kk-95w"/>
+                                    <constraint firstAttribute="width" constant="361" id="tD0-AL-bQO"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="dataSource" destination="MP4-i3-PTl" id="ETd-rK-UtO"/>
-                                    <outlet property="delegate" destination="MP4-i3-PTl" id="FQn-IL-Ffg"/>
+                                    <segue destination="vDb-1s-sYJ" kind="embed" identifier="tabBarController" id="LbV-ur-QoR"/>
                                 </connections>
-                            </collectionView>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HUN-1u-J76"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="whJ-hd-Dp3" firstAttribute="trailing" secondItem="8CO-ij-lK2" secondAttribute="trailingMargin" id="2CX-WF-Vqk"/>
+                            <constraint firstItem="xms-4s-PNq" firstAttribute="top" secondItem="whJ-hd-Dp3" secondAttribute="bottom" constant="88" id="3yd-Bc-7TI"/>
+                            <constraint firstItem="xms-4s-PNq" firstAttribute="leading" secondItem="HUN-1u-J76" secondAttribute="leading" constant="16" id="A58-zu-hhN"/>
                             <constraint firstItem="HUN-1u-J76" firstAttribute="bottom" secondItem="whJ-hd-Dp3" secondAttribute="bottom" constant="643" id="BXc-5H-6dz"/>
-                            <constraint firstItem="HUN-1u-J76" firstAttribute="bottom" secondItem="XkF-mu-PJ0" secondAttribute="bottom" constant="20" id="P5b-YA-k0G"/>
-                            <constraint firstItem="XkF-mu-PJ0" firstAttribute="leading" secondItem="HUN-1u-J76" secondAttribute="leading" constant="16" id="TYW-97-0lF"/>
-                            <constraint firstItem="XkF-mu-PJ0" firstAttribute="top" secondItem="whJ-hd-Dp3" secondAttribute="bottom" constant="92" id="cVc-pn-0g6"/>
+                            <constraint firstItem="xms-4s-PNq" firstAttribute="top" secondItem="whJ-hd-Dp3" secondAttribute="bottom" constant="88" id="Ccz-h3-t3R"/>
+                            <constraint firstItem="xms-4s-PNq" firstAttribute="leading" secondItem="HUN-1u-J76" secondAttribute="leading" constant="16" id="GsU-Jy-VMU"/>
+                            <constraint firstItem="HUN-1u-J76" firstAttribute="bottom" secondItem="xms-4s-PNq" secondAttribute="bottom" constant="20" id="JZu-aJ-MFY"/>
+                            <constraint firstItem="HUN-1u-J76" firstAttribute="bottom" secondItem="xms-4s-PNq" secondAttribute="bottom" constant="20" id="aVz-R7-wlL"/>
+                            <constraint firstItem="xms-4s-PNq" firstAttribute="top" secondItem="whJ-hd-Dp3" secondAttribute="bottom" constant="88" id="hBM-Q5-O1F"/>
+                            <constraint firstItem="HUN-1u-J76" firstAttribute="trailing" secondItem="xms-4s-PNq" secondAttribute="trailing" constant="16" id="kUz-4c-DAX"/>
                             <constraint firstItem="whJ-hd-Dp3" firstAttribute="top" secondItem="HUN-1u-J76" secondAttribute="top" constant="55" id="mGy-Qq-V1B"/>
                             <constraint firstItem="whJ-hd-Dp3" firstAttribute="leading" secondItem="8CO-ij-lK2" secondAttribute="leadingMargin" id="n6s-Dm-bSl"/>
-                            <constraint firstItem="HUN-1u-J76" firstAttribute="trailing" secondItem="XkF-mu-PJ0" secondAttribute="trailing" constant="16" id="tkx-6X-urJ"/>
+                            <constraint firstItem="HUN-1u-J76" firstAttribute="trailing" secondItem="xms-4s-PNq" secondAttribute="trailing" constant="16" id="v77-Ii-Y8d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OrL-W8-QkU"/>
@@ -291,20 +280,106 @@
                     <connections>
                         <outlet property="ageGroupLabel" destination="gAe-yD-lty" id="Xfa-8Y-b2j"/>
                         <outlet property="coachNameLabel" destination="Uar-Uq-chO" id="F1g-D8-WFb"/>
-                        <outlet property="playerCView" destination="XkF-mu-PJ0" id="fEr-gv-V67"/>
+                        <outlet property="containerView" destination="xms-4s-PNq" id="Sg2-5a-3BU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyW-7C-dx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3397.709923664122" y="-1702.1126760563382"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="kBa-rj-71J">
+        <!--Notes-->
+        <scene sceneID="Fe8-fJ-akv">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="yq6-ds-mWw" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8lC-cL-7A9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="TeamNotesViewController" id="I7W-H9-uaO" customClass="TeamNotesViewController" customModule="Ludi_Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BhQ-WK-UzO">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="535"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoD-JN-clc">
+                                <rect key="frame" x="135" y="135" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n31-UU-l6f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notes" id="3Fg-im-XFD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOW-Ye-sMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4367" y="-2544"/>
+            <point key="canvasLocation" x="5408" y="-1794"/>
+        </scene>
+        <!--Team Roster-->
+        <scene sceneID="ATk-fZ-boZ">
+            <objects>
+                <viewController storyboardIdentifier="TeamRosterViewController" id="4ly-l3-I2H" customClass="TeamRosterViewController" customModule="Ludi_Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="imc-SZ-1sA">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="535"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I dont understand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewv-zW-lYu">
+                                <rect key="frame" x="46" y="172" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zIy-GA-jVN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Team Roster" id="3XJ-In-ZS9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvo-9h-Azv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5406.8702290076335" y="-2402.4647887323945"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="d5Y-tX-yZM">
+            <objects>
+                <viewController storyboardIdentifier="ChatForCoachesViewController" id="Eo0-cT-HE4" customClass="ChatForCoachesViewController" customModule="Ludi_Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PA2-yx-ljd">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="535"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat for Coaches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcx-Xd-Dgq">
+                                <rect key="frame" x="114" y="169" width="133" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bRQ-Zi-b8s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" id="Lgy-g1-KPv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGl-4c-3qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6373" y="-2098"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Nnn-bZ-ZYS">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" id="vDb-1s-sYJ" customClass="TabBarViewController" customModule="Ludi_Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xf6-5O-FXg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4ly-l3-I2H" kind="relationship" relationship="viewControllers" id="8JX-4a-v3U"/>
+                        <segue destination="I7W-H9-uaO" kind="relationship" relationship="viewControllers" id="Og2-tH-Kz6"/>
+                        <segue destination="Eo0-cT-HE4" kind="relationship" relationship="viewControllers" id="FkK-Ox-iE8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiE-Kl-lDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4505" y="-2098"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

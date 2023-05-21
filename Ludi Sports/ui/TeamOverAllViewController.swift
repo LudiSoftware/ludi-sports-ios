@@ -7,60 +7,55 @@
 
 import UIKit
 
-class TeamOverAllViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class TeamOverAllViewController: UIViewController {
+    
+    
     @IBOutlet weak var coachNameLabel: UILabel!
     @IBOutlet weak var ageGroupLabel: UILabel!
     @IBOutlet weak var playerCView: UICollectionView!
 
+    @IBOutlet weak var containerView: UIView!
     var team: Team? = nil
     var realmInstance = realm()
     var roster: [PlayerRef] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        guard let tabBarViewController = storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController else {
+            fatalError("Failed to instantiate TabBarViewController from storyboard.")
+        }
+
+        addChild(tabBarViewController)
+        tabBarViewController.view.frame = containerView.bounds
+        containerView.addSubview(tabBarViewController.view)
+        tabBarViewController.didMove(toParent: self)
 
         coachNameLabel.text = team?.headCoachName
         ageGroupLabel.text = team?.ageGroup
 
-        // Set up collection view
-        playerCView.dataSource = self
-        playerCView.delegate = self
-        playerCView.register(UINib(nibName: "PlayerCCell", bundle: nil), forCellWithReuseIdentifier: "playerCCell")
-        
-        let rosterID = team?.rosterId
+        // Rest of your code...
+    }
 
-        if let rosterID = rosterID {
-            // Get roster from Firebase and store it in Realm
-            fireGetRosterAsync(rosterID: rosterID, realm: realmInstance)
-            let playerList = realmInstance.findPlayersInRosterById(rosterId: rosterID)
-            roster = Array(playerList!) // Convert List<PlayerRef> to [PlayerRef]
-            playerCView.reloadData()
-        }
+   
+        // Set up collection view
+//        playerCView.dataSource = self
+//        playerCView.delegate = self
+//        playerCView.register(UINib(nibName: "PlayerCCell", bundle: nil), forCellWithReuseIdentifier: "playerCCell")
+//
+//        let rosterID = team?.rosterId
+//
+//        if let rosterID = rosterID {
+//            // Get roster from Firebase and store it in Realm
+//            fireGetRosterAsync(rosterID: rosterID, realm: realmInstance)
+//            let playerList = realmInstance.findPlayersInRosterById(rosterId: rosterID)
+//            roster = Array(playerList!) // Convert List<PlayerRef> to [PlayerRef]
+//            playerCView.reloadData()
+//        }
     }
 
     // MARK: - UICollectionViewDataSource
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return roster.count
-    }
+    
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "playerCCell", for: indexPath) as! PlayerCCell
-        let player = roster[indexPath.item]
-        cell.configure(with: player)
-        return cell
-    }
-
-    // MARK: - UICollectionViewDelegate
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Handle selection of a player cell
-    }
-
-    // MARK: - UICollectionViewDelegateFlowLayout
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Return the desired size for each cell
-        return CGSize(width: collectionView.bounds.width, height: 100)
-    }
-}
