@@ -8,53 +8,46 @@
 import Foundation
 import UIKit
 
-class TeamRosterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class TeamRosterViewController: UIViewController {
     // Create an instance of UICollectionView
-    var rosterCollectionView: UICollectionView!
+   
+    @IBOutlet weak var playerCView: UICollectionView!
+    var team: Team?
     
     // Your data source for the collection view
     // rosterData needs to be PlayerRefIDs
-    var playerList: [PlayerRef] = []
-    var realmInstance = realm()
-    var rosterId: String?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+        var playerList: [PlayerRef] = []
+        var realmInstance = realm()
+        var rosterId: String?
         
-        if let rosterId = rosterId {
-           // playerList = realmInstance.findRosterById(rosterId: rosterId)
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            // Set up collection view
+            playerCView.dataSource = self
+            playerCView.delegate = self
+            playerCView.register(UINib(nibName: "PlayerCCell", bundle: nil), forCellWithReuseIdentifier: "playerCCell")
+            
+            if let rosterID = team?.rosterId {
+                // Get roster from Firebase and store it in Realm
+                fireGetRosterAsync(rosterID: rosterID, realm: realmInstance)
+                
+                if let playerList = realmInstance.findPlayersInRosterById(rosterId: rosterID) {
+                    self.playerList = Array(playerList) // Convert List<PlayerRef> to [PlayerRef]
+                    playerCView.reloadData()
+                }
+            }
         }
-       
-        // Configure collection view layout
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .vertical
-//        layout.itemSize = CGSize(width: 100, height: 100)
-//
-//        // Initialize collection view with layout
-//        rosterCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
-//
-//        // Set data source and delegate to the view controller
-//        rosterCollectionView.dataSource = self
-//        rosterCollectionView.delegate = self
-//
-//        // Register cell class for reuse
-//        rosterCollectionView.register(PlayerCCell.self, forCellWithReuseIdentifier: "playerCCell")
-//
-//        // Add collection view to the view hierarchy
-//        view.addSubview(rosterCollectionView)
-//
-//        // Reload collection view data
-//        rosterCollectionView.reloadData()
     }
-    
-    // MARK: - UICollectionViewDataSource
-    
+
+extension TeamRosterViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCCell", for: indexPath) as! PlayerCCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "playerCCell", for: indexPath) as! PlayerCCell
         
         // Configure the cell with player data
         let player = playerList[indexPath.item]
@@ -62,8 +55,13 @@ class TeamRosterViewController: UIViewController, UICollectionViewDataSource, UI
         
         return cell
     }
-    
-    // MARK: - UICollectionViewDelegate
+}
+
+extension TeamRosterViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Return the desired size of each cell
+        return CGSize(width: 100, height: 100)
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Handle selection of an item in the collection view
@@ -71,4 +69,3 @@ class TeamRosterViewController: UIViewController, UICollectionViewDataSource, UI
         // ...
     }
 }
-

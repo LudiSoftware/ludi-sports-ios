@@ -27,6 +27,8 @@ class TeamOverAllViewController: UIViewController {
             fatalError("Failed to instantiate TabBarViewController from storyboard.")
         }
 
+        tabBarViewController.team = team
+        
         addChild(tabBarViewController)
         tabBarViewController.view.frame = containerView.bounds
         containerView.addSubview(tabBarViewController.view)
@@ -39,20 +41,7 @@ class TeamOverAllViewController: UIViewController {
     }
 
    
-        // Set up collection view
-//        playerCView.dataSource = self
-//        playerCView.delegate = self
-//        playerCView.register(UINib(nibName: "PlayerCCell", bundle: nil), forCellWithReuseIdentifier: "playerCCell")
-//
-//        let rosterID = team?.rosterId
-//
-//        if let rosterID = rosterID {
-//            // Get roster from Firebase and store it in Realm
-//            fireGetRosterAsync(rosterID: rosterID, realm: realmInstance)
-//            let playerList = realmInstance.findPlayersInRosterById(rosterId: rosterID)
-//            roster = Array(playerList!) // Convert List<PlayerRef> to [PlayerRef]
-//            playerCView.reloadData()
-//        }
+      
     }
 
     // MARK: - UICollectionViewDataSource

@@ -11,6 +11,7 @@ import UIKit
 class ChatForCoachesViewController: UIViewController {
 
     // Add your properties and outlets here
+    var team: Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()

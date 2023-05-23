@@ -18,6 +18,10 @@
 		78966C282A185D5800583279 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C272A185D5800583279 /* TabBarViewController.swift */; };
 		78966C2A2A18631D00583279 /* ChatForCoachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C292A18631D00583279 /* ChatForCoachesViewController.swift */; };
 		78966C2C2A18633600583279 /* TeamNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C2B2A18633600583279 /* TeamNotesViewController.swift */; };
+		78966C302A1B1E3F00583279 /* FireNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C2F2A1B1E3F00583279 /* FireNotes.swift */; };
+		78966C332A1BFE5400583279 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C312A1BFE5400583279 /* NoteCell.swift */; };
+		78966C342A1BFE5400583279 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78966C322A1BFE5400583279 /* NoteCell.xib */; };
+		78966C362A1C6B2C00583279 /* FireChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C352A1C6B2C00583279 /* FireChat.swift */; };
 		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
 		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
 		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
@@ -81,6 +85,10 @@
 		78966C272A185D5800583279 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		78966C292A18631D00583279 /* ChatForCoachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatForCoachesViewController.swift; sourceTree = "<group>"; };
 		78966C2B2A18633600583279 /* TeamNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNotesViewController.swift; sourceTree = "<group>"; };
+		78966C2F2A1B1E3F00583279 /* FireNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireNotes.swift; sourceTree = "<group>"; };
+		78966C312A1BFE5400583279 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		78966C322A1BFE5400583279 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
+		78966C352A1C6B2C00583279 /* FireChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChat.swift; sourceTree = "<group>"; };
 		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
 		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
@@ -177,6 +185,8 @@
 				78FEAC7B2A148EC60013C929 /* TeamCell.xib */,
 				785738E72A169F29000D7D53 /* PlayerCCell.swift */,
 				785738E82A169F29000D7D53 /* PlayerCCell.xib */,
+				78966C312A1BFE5400583279 /* NoteCell.swift */,
+				78966C322A1BFE5400583279 /* NoteCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +294,8 @@
 				782483CD2A13303F00C78173 /* FireCoach.swift */,
 				782483CF2A13322B00C78173 /* FireUser.swift */,
 				78966C252A1804B000583279 /* FireRoster.swift */,
+				78966C2F2A1B1E3F00583279 /* FireNotes.swift */,
+				78966C352A1C6B2C00583279 /* FireChat.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -294,11 +306,11 @@
 				78F51E262A0C12E7003D83A0 /* Views */,
 				FB06D77129F8743D00E2E26B /* login */,
 				FB06D77A29F87EBE00E2E26B /* DashboardViewController.swift */,
-				78966C272A185D5800583279 /* TabBarViewController.swift */,
-				78966C2B2A18633600583279 /* TeamNotesViewController.swift */,
 				785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */,
-				78966C292A18631D00583279 /* ChatForCoachesViewController.swift */,
+				78966C272A185D5800583279 /* TabBarViewController.swift */,
 				78966C232A17F76700583279 /* TeamRosterViewController.swift */,
+				78966C2B2A18633600583279 /* TeamNotesViewController.swift */,
+				78966C292A18631D00583279 /* ChatForCoachesViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -406,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78966C342A1BFE5400583279 /* NoteCell.xib in Resources */,
 				FB06D72929F7029F00E2E26B /* LaunchScreen.storyboard in Resources */,
 				78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */,
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
@@ -470,6 +483,7 @@
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
 				FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */,
 				FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */,
+				78966C362A1C6B2C00583279 /* FireChat.swift in Sources */,
 				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
 				78966C242A17F76700583279 /* TeamRosterViewController.swift in Sources */,
 				78966C2C2A18633600583279 /* TeamNotesViewController.swift in Sources */,
@@ -489,6 +503,7 @@
 				FB06D75929F74AD400E2E26B /* League.swift in Sources */,
 				78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */,
 				FB06D76E29F7547A00E2E26B /* RosterSession.swift in Sources */,
+				78966C302A1B1E3F00583279 /* FireNotes.swift in Sources */,
 				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
@@ -514,6 +529,7 @@
 				FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */,
 				78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */,
 				FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */,
+				78966C332A1BFE5400583279 /* NoteCell.swift in Sources */,
 				78966C282A185D5800583279 /* TabBarViewController.swift in Sources */,
 				FB06D77B29F87EBE00E2E26B /* DashboardViewController.swift in Sources */,
 			);
