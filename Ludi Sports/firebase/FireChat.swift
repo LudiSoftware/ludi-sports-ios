@@ -13,7 +13,7 @@ func fireGetChatAsync(realm: Realm) {
     
     firebaseDatabase(collection: DatabasePaths.chat.rawValue) { ref in
         ref.observeSingleEvent(of: .value) { snapshot, _ in
-            var _ = snapshot.toLudiObjects(Chat.self)
+            var _ = snapshot.toLudiObject(Chat.self)
             
             
            

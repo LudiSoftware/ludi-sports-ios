@@ -7,18 +7,66 @@
 
 import Foundation
 import UIKit
+import RealmSwift
+import FirebaseDatabase
 
-class ChatForCoachesViewController: UIViewController {
+class ChatForCoachesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
 
+    @IBOutlet weak var chatTableView: UITableView!
     // Add your properties and outlets here
     var team: Team?
+    var realmInstance = realm()
+    var chatLog: Results<Chat>!
+    var chat: [Chat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatTableView.delegate = self
+        chatTableView.dataSource = self
+        
+        fireGetChatAsync(realm: realmInstance)
+        
+        chatLog = realmInstance.objects(Chat.self)
+        
+        
+        if chatLog.isEmpty {
+            print("ChatLog is empty.")
+        } else {
+            for message in chatLog {
+                self.chat.append(message)
+                print(chat)
+                
+        }
+            chatTableView.reloadData()
+        
+        }
+        
+        
+        
         // Perform any additional setup after loading the view.
         setupUI()
         loadChatHistory()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return chat.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "chatMessage", for: indexPath) as? chatMessage else {
+               return UITableViewCell()
+           }
+       
+        let chat = chat[indexPath.row]
+//           print(note.message)
+//           print(note.ownerName)
+       
+        cell.configure(with: chat)
+        
+        return cell
     }
     
     // MARK: - UI Setup

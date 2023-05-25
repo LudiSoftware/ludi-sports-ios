@@ -19,6 +19,9 @@ class TeamOverAllViewController: UIViewController {
     var realmInstance = realm()
     var roster: [PlayerRef] = []
 
+    @IBAction func formationButton(_ sender: Any) {
+        performSegue(withIdentifier: "formationSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,10 +44,17 @@ class TeamOverAllViewController: UIViewController {
     }
 
    
-      
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "formationSegue" {
+            if let destinationVC = segue.destination as? FormationViewController {
+                // Pass any necessary data to the FormationViewController
+            }
+        }
     }
 
-    // MARK: - UICollectionViewDataSource
+    }
+
+    
 
     
 
