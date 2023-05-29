@@ -47,7 +47,9 @@ class TeamOverAllViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "formationSegue" {
             if let destinationVC = segue.destination as? FormationViewController {
-                // Pass any necessary data to the FormationViewController
+                
+                //destinationVC.roster = roster
+                
             }
         }
     }

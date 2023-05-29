@@ -5,42 +5,51 @@
 //  Created by Michael Zanaty on 5/23/23.
 //
 
-import Foundation
-import RealmSwift
-import FirebaseDatabase
-
-
 import UIKit
+import MobileCoreServices
 
-class FormationViewController: UIViewController, UITableViewDragDelegate {
+class FormationViewController: UIViewController {
     
+    @IBOutlet weak var formationTableView: FormationTableView!
     @IBOutlet weak var soccerImage: UIImageView!
-    @IBOutlet weak var formationTableView: UITableView!
+    
+    var roster: [PlayerRef] = []
+    var dropInteraction: UIDropInteraction!
+    
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            
-       
-            // Set the background image of the soccerImage UIImageView
-            soccerImage.image = UIImage(named: "Soccer_Field_Transparant")
-            
-            // Set the drag delegate for the table view
-            formationTableView.dragDelegate = self
-            // Enable drag interactions for the table view
-            formationTableView.dragInteractionEnabled = true
-        }
+        super.viewDidLoad()
         
-        // MARK: - UITableViewDragDelegate
+        soccerImage.image = UIImage(named: "Soccer_Field_Transparant.svg")
         
-        func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-            // Create UIDragItems for the items you want to drag
-            let placeholderItem = UIImage(systemName: "square.fill") // Use an appropriate placeholder image or data
-              
-            // Create a UIDragItem with the placeholder item
-            let itemProvider = NSItemProvider(object: placeholderItem as! NSItemProviderWriting)
-            let dragItem = UIDragItem(itemProvider: itemProvider)
-            
-            return [dragItem]
-        }
-        
+        // Set up drop interaction for the soccer image view
+        dropInteraction = UIDropInteraction(delegate: self)
+        soccerImage.addInteraction(dropInteraction)
     }
+    
+}
+
+extension FormationViewController: UIDropInteractionDelegate {
+    
+    func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
+        return session.hasItemsConforming(toTypeIdentifiers: [kUTTypePlainText as String])
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
+        return UIDropProposal(operation: .copy)
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
+        session.loadObjects(ofClass: NSString.self) { [weak self] items in
+            guard let strings = items as? [String], let self = self else {
+                return
+            }
+            
+            // Handle the dropped items (strings) here
+            // You can access the dropped items from the "strings" array
+            
+            // Example: Log the dropped strings
+            print(strings)
+        }
+    }
+}

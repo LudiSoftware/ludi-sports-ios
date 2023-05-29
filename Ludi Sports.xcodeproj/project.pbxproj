@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
+		7802990F2A1FDF9E00FBFE66 /* FormationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */; };
+		780299122A1FDFB600FBFE66 /* FormationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780299102A1FDFB600FBFE66 /* FormationCell.swift */; };
+		780299132A1FDFB600FBFE66 /* FormationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 780299112A1FDFB600FBFE66 /* FormationCell.xib */; };
 		782483CE2A13303F00C78173 /* FireCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CD2A13303F00C78173 /* FireCoach.swift */; };
 		782483D02A13322B00C78173 /* FireUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CF2A13322B00C78173 /* FireUser.swift */; };
 		785738E62A1699B8000D7D53 /* TeamOverAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */; };
@@ -78,6 +81,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTableView.swift; sourceTree = "<group>"; };
+		780299102A1FDFB600FBFE66 /* FormationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationCell.swift; sourceTree = "<group>"; };
+		780299112A1FDFB600FBFE66 /* FormationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormationCell.xib; sourceTree = "<group>"; };
 		782483CD2A13303F00C78173 /* FireCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCoach.swift; sourceTree = "<group>"; };
 		782483CF2A13322B00C78173 /* FireUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireUser.swift; sourceTree = "<group>"; };
 		785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverAllViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,9 @@
 				78966C322A1BFE5400583279 /* NoteCell.xib */,
 				78C8154D2A1D321600CA8D01 /* chatMessage.swift */,
 				78C8154E2A1D321600CA8D01 /* chatMessage.xib */,
+				7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */,
+				780299102A1FDFB600FBFE66 /* FormationCell.swift */,
+				780299112A1FDFB600FBFE66 /* FormationCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,6 +442,7 @@
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
 				FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */,
 				78C815502A1D321600CA8D01 /* chatMessage.xib in Resources */,
+				780299132A1FDFB600FBFE66 /* FormationCell.xib in Resources */,
 				785738EA2A169F29000D7D53 /* PlayerCCell.xib in Resources */,
 				FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */,
 			);
@@ -489,6 +499,7 @@
 			files = (
 				FB06D77729F8774B00E2E26B /* FireParser.swift in Sources */,
 				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
+				780299122A1FDFB600FBFE66 /* FormationCell.swift in Sources */,
 				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
 				FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */,
@@ -534,6 +545,7 @@
 				FB06D74929F7111500E2E26B /* Player.swift in Sources */,
 				782483CE2A13303F00C78173 /* FireCoach.swift in Sources */,
 				FB06D74529F7110300E2E26B /* Coach.swift in Sources */,
+				7802990F2A1FDF9E00FBFE66 /* FormationTableView.swift in Sources */,
 				FB06D76129F74AFF00E2E26B /* CustomAttribute.swift in Sources */,
 				FB06D76C29F7547600E2E26B /* TeamSession.swift in Sources */,
 				FB06D75729F74A9200E2E26B /* Organization.swift in Sources */,
