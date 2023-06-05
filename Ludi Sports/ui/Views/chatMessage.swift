@@ -9,13 +9,13 @@ import UIKit
 
 class chatMessage: UITableViewCell {
 
-    @IBOutlet weak var chatMessage: UILabel!
-    @IBOutlet weak var chatOwnerImage: UIImageView!
+    @IBOutlet weak var chatText: UILabel!
     
-    
+    @IBOutlet weak var chatOwner: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         
     }
 
@@ -25,9 +25,12 @@ class chatMessage: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with chat: Chat){
+    func configure(with chatMessage: Chat){
         print("Made it")
-        print(chat.messageText)
+        print(chatMessage.messageText)
+        chatOwner.text = chatMessage.senderName
+        chatText.text = chatMessage.messageText
+        
     }
     
 }

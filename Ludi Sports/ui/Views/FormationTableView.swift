@@ -6,26 +6,33 @@
 //
 import Foundation
 import UIKit
+import RealmSwift
 
 class FormationTableView: UITableView, UITableViewDelegate, UITableViewDataSource, UITableViewDragDelegate {
     
+    var realmInstance = realm()
+    var team: Team?
+    var rosterId: String?
     var roster: [PlayerRef] = []
+    var test: List<PlayerRef>?
+    
+    
+    //need list of playerRef objects in TableView and then need to be able to drag them and turn them into imageViews?
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(roster)
-        setupTableView()
-    }
-    
-    private func setupTableView() {
-        delegate = self
+        
+        if let rosterId = rosterId {
+            test = realmInstance.findPlayersInRosterById(rosterId: rosterId)
+            roster = Array(test!)
+        }
+        
         dataSource = self
-        dragDelegate = self
+        delegate = self
         register(UINib(nibName: "FormationCell", bundle: nil), forCellReuseIdentifier: "formationCell")
         dragInteractionEnabled = true
     }
-    
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,9 +40,11 @@ class FormationTableView: UITableView, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "formationCell", for: indexPath) as? FormationCell else {
-            return UITableViewCell()
-        }
+        
+        let reuseIdentifier = "formationCell"
+        tableView.register(UINib(nibName: "FormationCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! FormationCell
         
         // Configure the custom cell with your data
         let player = roster[indexPath.row]

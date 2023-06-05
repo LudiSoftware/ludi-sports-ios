@@ -9,16 +9,29 @@ import Foundation
 import RealmSwift
 import FirebaseDatabase
 
-func fireGetChatAsync(realm: Realm) {
+func fireGetChatAsync(teamId: String, block: @escaping ([Chat]?) -> Void) {
     
     firebaseDatabase(collection: DatabasePaths.chat.rawValue) { ref in
-        ref.observeSingleEvent(of: .value) { snapshot, _ in
-            var _ = snapshot.toLudiObject(Chat.self)
+        ref.child(teamId).observeSingleEvent(of: .value) { snapshot, _ in
+            var chats = snapshot as? [Chat]
+            block(chats)
             
-            
-           
         }
     }
     
 }
+
+//func fireGetChatAsync(teamId: String, realm: Realm) {
+//
+//    firebaseDatabase(collection: DatabasePaths.chat.rawValue) { ref in
+//        ref.observeSingleEvent(of: .value) { snapshot, _ in
+//            var _ = snapshot.toLudiObjects(Chat.self)
+//
+//
+//
+//
+//        }
+//    }
+//
+//}
 

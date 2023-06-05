@@ -240,7 +240,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Formation"/>
                                         <connections>
                                             <action selector="formationButton:" destination="MP4-i3-PTl" eventType="touchUpInside" id="muL-7n-AGG"/>
-                                            <segue destination="ops-1m-abX" kind="show" identifier="formationSegue" id="rvf-FH-Iiq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -292,6 +291,7 @@
                         <outlet property="ageGroupLabel" destination="gAe-yD-lty" id="Xfa-8Y-b2j"/>
                         <outlet property="coachNameLabel" destination="Uar-Uq-chO" id="F1g-D8-WFb"/>
                         <outlet property="containerView" destination="xms-4s-PNq" id="Sg2-5a-3BU"/>
+                        <segue destination="ops-1m-abX" kind="show" identifier="formationSegue" id="s3H-aJ-DME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyW-7C-dx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -422,11 +422,20 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01r-ID-wT7">
-                                <rect key="frame" x="16" y="418" width="329" height="34"/>
+                                <rect key="frame" x="16" y="418" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dq-VD-oh1">
+                                <rect key="frame" x="276" y="418" width="64" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                                <connections>
+                                    <action selector="sendPressed:" destination="Eo0-cT-HE4" eventType="touchUpInside" id="Riq-TO-YPy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bRQ-Zi-b8s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -434,6 +443,7 @@
                     <tabBarItem key="tabBarItem" title="Chat" id="Lgy-g1-KPv"/>
                     <connections>
                         <outlet property="chatTableView" destination="iz5-7G-EHI" id="ACe-12-sGe"/>
+                        <outlet property="chatbar" destination="01r-ID-wT7" id="OzL-Zp-XF2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGl-4c-3qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -453,28 +463,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sMt-CC-AyA" userLabel="formation Table View" customClass="FormationTableView" customModule="Ludi_Sports" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="48" width="393" height="158"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQM-cQ-jGJ">
+                                <rect key="frame" x="94" y="48" width="196" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="formationCell" id="zpi-2V-f1s" customClass="FormationCell" customModule="Ludi_Sports" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zpi-2V-f1s" id="XQQ-11-Bjq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ac-RS-wXf">
+                                <rect key="frame" x="76" y="128" width="87" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="player">
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
+                                </accessibility>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tcn-el-zdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dcR-qy-5Je"/>
                     <connections>
-                        <outlet property="FormationTableView" destination="sMt-CC-AyA" id="nXy-Az-wrs"/>
                         <outlet property="soccerImage" destination="p0B-oD-oWm" id="ptv-5m-3Qz"/>
+                        <outlet property="testLabel" destination="rQM-cQ-jGJ" id="vaZ-Qi-p0x"/>
+                        <outlet property="testPlayer" destination="9ac-RS-wXf" id="2lh-pC-S0L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qac-72-wDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -505,6 +516,7 @@
         <segue reference="PLE-5a-vy5"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
         <image name="soccerball" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

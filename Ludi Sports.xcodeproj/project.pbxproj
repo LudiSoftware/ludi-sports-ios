@@ -26,6 +26,7 @@
 		78966C332A1BFE5400583279 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C312A1BFE5400583279 /* NoteCell.swift */; };
 		78966C342A1BFE5400583279 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78966C322A1BFE5400583279 /* NoteCell.xib */; };
 		78966C362A1C6B2C00583279 /* FireChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C352A1C6B2C00583279 /* FireChat.swift */; };
+		78C05C8D2A291DDA00898DC0 /* ChatLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05C8C2A291DDA00898DC0 /* ChatLiveData.swift */; };
 		78C8154F2A1D321600CA8D01 /* chatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8154D2A1D321600CA8D01 /* chatMessage.swift */; };
 		78C815502A1D321600CA8D01 /* chatMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C8154E2A1D321600CA8D01 /* chatMessage.xib */; };
 		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
@@ -99,6 +100,7 @@
 		78966C312A1BFE5400583279 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		78966C322A1BFE5400583279 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
 		78966C352A1C6B2C00583279 /* FireChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChat.swift; sourceTree = "<group>"; };
+		78C05C8C2A291DDA00898DC0 /* ChatLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLiveData.swift; sourceTree = "<group>"; };
 		78C8154D2A1D321600CA8D01 /* chatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatMessage.swift; sourceTree = "<group>"; };
 		78C8154E2A1D321600CA8D01 /* chatMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = chatMessage.xib; sourceTree = "<group>"; };
 		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				FB41556D29F9D1E9000DC692 /* TeamLiveDat.swift */,
+				78C05C8C2A291DDA00898DC0 /* ChatLiveData.swift */,
 			);
 			path = LiveData;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				FB06D74729F7110C00E2E26B /* Parent.swift in Sources */,
 				FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */,
 				78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */,
+				78C05C8D2A291DDA00898DC0 /* ChatLiveData.swift in Sources */,
 				FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */,
 				78966C332A1BFE5400583279 /* NoteCell.swift in Sources */,
 				78966C282A185D5800583279 /* TabBarViewController.swift in Sources */,
