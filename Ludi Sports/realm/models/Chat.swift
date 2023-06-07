@@ -20,5 +20,7 @@ class Chat: Object, Codable {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
 }
+
 

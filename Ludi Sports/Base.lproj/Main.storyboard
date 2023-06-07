@@ -233,13 +233,26 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-y7-ZIY">
-                                        <rect key="frame" x="265" y="0.0" width="102" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-y7-ZIY">
+                                        <rect key="frame" x="265" y="0.0" width="102" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="vhV-ZH-zoY"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Formation"/>
                                         <connections>
                                             <action selector="formationButton:" destination="MP4-i3-PTl" eventType="touchUpInside" id="muL-7n-AGG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl2-XD-VDC">
+                                        <rect key="frame" x="278" y="101" width="75" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="wFa-SL-jL7"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="timerButton:" destination="MP4-i3-PTl" eventType="touchUpInside" id="tkm-8d-qhc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -248,10 +261,17 @@
                                     <constraint firstItem="EQb-iH-hRl" firstAttribute="leading" secondItem="whJ-hd-Dp3" secondAttribute="leading" id="5UA-Xe-pRJ"/>
                                     <constraint firstAttribute="bottom" secondItem="EQb-iH-hRl" secondAttribute="bottom" constant="72" id="6oj-N4-Bii"/>
                                     <constraint firstItem="1aS-Mb-XuD" firstAttribute="leading" secondItem="EQb-iH-hRl" secondAttribute="trailing" constant="8" id="IzJ-yL-lHY"/>
+                                    <constraint firstAttribute="trailing" secondItem="pJe-y7-ZIY" secondAttribute="trailing" constant="-6" id="JGo-y0-mgt"/>
+                                    <constraint firstItem="pJe-y7-ZIY" firstAttribute="leading" secondItem="1aS-Mb-XuD" secondAttribute="trailing" constant="81.670000000000002" id="Jbo-sl-IY2"/>
+                                    <constraint firstItem="pJe-y7-ZIY" firstAttribute="top" secondItem="whJ-hd-Dp3" secondAttribute="top" id="cgd-PU-58w"/>
                                     <constraint firstItem="EQb-iH-hRl" firstAttribute="top" secondItem="1aS-Mb-XuD" secondAttribute="top" id="cv4-iP-gqW"/>
                                     <constraint firstItem="EQb-iH-hRl" firstAttribute="top" secondItem="whJ-hd-Dp3" secondAttribute="top" id="fWh-79-x59"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sl2-XD-VDC" secondAttribute="trailing" constant="8" id="gdJ-CF-Oxf"/>
                                     <constraint firstAttribute="height" constant="144" id="hIu-yw-kv6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sl2-XD-VDC" secondAttribute="bottom" constant="8" id="hxq-fi-jLJ"/>
+                                    <constraint firstItem="Sl2-XD-VDC" firstAttribute="leading" secondItem="1aS-Mb-XuD" secondAttribute="trailing" constant="94.670000000000002" id="qLS-vK-XzI"/>
                                     <constraint firstAttribute="width" constant="361" id="qbg-qP-PfE"/>
+                                    <constraint firstItem="Sl2-XD-VDC" firstAttribute="top" secondItem="pJe-y7-ZIY" secondAttribute="bottom" constant="49" id="xij-fa-N1v"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-4s-PNq">
@@ -292,11 +312,12 @@
                         <outlet property="coachNameLabel" destination="Uar-Uq-chO" id="F1g-D8-WFb"/>
                         <outlet property="containerView" destination="xms-4s-PNq" id="Sg2-5a-3BU"/>
                         <segue destination="ops-1m-abX" kind="show" identifier="formationSegue" id="s3H-aJ-DME"/>
+                        <segue destination="ikU-gm-3yb" kind="show" identifier="timerSegue" id="CC3-3z-b6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyW-7C-dx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3397.709923664122" y="-1702.1126760563382"/>
+            <point key="canvasLocation" x="3384" y="-1696"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Fe8-fJ-akv">
@@ -450,6 +471,52 @@
             </objects>
             <point key="canvasLocation" x="6371.7557251908393" y="-2099.6478873239439"/>
         </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="0yk-ow-jzQ">
+            <objects>
+                <viewController id="ikU-gm-3yb" customClass="TimerViewController" customModule="Ludi_Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JK5-v6-d2l" customClass="TimerView" customModule="Ludi_Sports" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUR-ys-JKu">
+                                <rect key="frame" x="71" y="150" width="251" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="systemRedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhV-4A-ioS">
+                                <rect key="frame" x="78" y="404" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="ikU-gm-3yb" eventType="touchUpInside" id="U18-Qj-93e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7V-Ck-JqS">
+                                <rect key="frame" x="271" y="404" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="ikU-gm-3yb" eventType="touchUpInside" id="Z6B-Hu-GeQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3G3-0N-ySM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2W9-4D-uNV"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="gUR-ys-JKu" id="U6E-0F-vd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycC-4J-7Jp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612.9770992366412" y="-2523.9436619718313"/>
+        </scene>
         <!--Formation View Controller-->
         <scene sceneID="Ume-8j-foJ">
             <objects>
@@ -523,6 +590,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

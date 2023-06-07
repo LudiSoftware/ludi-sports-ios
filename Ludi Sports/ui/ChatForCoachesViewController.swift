@@ -29,39 +29,46 @@ class ChatForCoachesViewController: UIViewController, UITableViewDelegate, UITab
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        
-        realmInstance.safeUser { it in
-            currentUser = it
-            print(currentUser?.name)
-            print(currentUser)
-           
-        }
-        
-        chatTableView.register(UINib(nibName: "chatMessage", bundle: nil), forCellReuseIdentifier: "chatMessage")
-        
-        teamId = team?.id
-        
-        chatTableView.dataSource = self
-        chatTableView.delegate = self
-        
-        if let it = teamId {
-            fireGetChatAsync(teamId: it) { chats in
-                chats
-            }
-        }
-        
-        chatLog = realmInstance.objects(Chat.self).sorted(byKeyPath: "timestamp")
-        chat = Array(chatLog)
-        print(chat)
-        
-       
-            self.chatTableView.reloadData()
+            super.viewDidLoad()
             
-            let lastRowIndex = IndexPath(row: self.chat.count - 1, section: 0)
-                self.chatTableView.scrollToRow(at: lastRowIndex, at: .bottom, animated: true)
+            chatTableView.register(UINib(nibName: "chatMessage", bundle: nil), forCellReuseIdentifier: "chatMessage")
+            
+            teamId = team?.id
+            
+            chatTableView.dataSource = self
+            chatTableView.delegate = self
+            
+            realmInstance.safeUser { user in
+                currentUser = user
+            }
+            
+            if let teamId = teamId {
+                fireGetChatAsync(teamId: teamId) { [weak self] chats in
+                    self?.chat = chats ?? []
+                    self?.chatTableView.reloadData()
+                    
+                    if chats!.isEmpty {
+                        let lastRowIndex = IndexPath(row: chats!.count - 1, section: 0)
+                        self?.chatTableView.scrollToRow(at: lastRowIndex, at: .bottom, animated: true)
+                    }
+                }
+            }
+        
+        
+//        chatLog = realmInstance.objects(Chat.self).sorted(byKeyPath: "timestamp")
+//        chat = Array(chatLog)
+//        print(chat)
+//
+        DispatchQueue.main.async {
+            self.chatTableView.reloadData()
+        }
+       
+            
+            
+        if !chat.isEmpty {
+            let lastRowIndex = IndexPath(row: chat.count - 1, section: 0)
+            chatTableView.scrollToRow(at: lastRowIndex, at: .bottom, animated: true)
+        }
       
     }
     
@@ -77,53 +84,36 @@ class ChatForCoachesViewController: UIViewController, UITableViewDelegate, UITab
         }
         
         let chatMessage = chat[indexPath.row]
-        print(chatMessage.messageText)
         
         cell.configure(with: chatMessage)
         
         return cell
     }
     @IBAction func sendPressed(_ sender: Any) {
-        guard let messageText = chatbar.text, !messageText.isEmpty else {
-            return
-        }
-        
-        if let teamId = teamId {
-            let chatRef = Database.database().reference().child("chat").child(teamId)
-            
-            let messageData: [String: Any] = [
-                "messageText": messageText,
-                "timestamp": ServerValue.timestamp(),
-                "senderName": currentUser?.name
-                // Add any additional properties you have in the Chat object
-            ]
-            
-            let newMessageRef = chatRef.childByAutoId()
-            newMessageRef.setValue(messageData) { [weak self] error, _ in
-                if let error = error {
-                    print("Failed to send message to Firebase: \(error)")
+        guard let messageText = chatbar.text, !messageText.isEmpty, let teamId = teamId else {
                     return
                 }
                 
-                // Update local chat list and reload table view
-                let chatMessage = Chat()
-                chatMessage.messageText = messageText
-                chatMessage.timestamp = Int(Date().timeIntervalSince1970)
-                self?.chat.append(chatMessage)
-                self?.chatTableView.reloadData()
+                let chatRef = Database.database().reference().child("chat").child(teamId)
                 
-                // Clear chat bar
-                self?.chatbar.text = nil
+                let chatObject = Chat()
+                chatObject.messageText = messageText
+                chatObject.timestamp = Int(Date().timeIntervalSince1970)
+                chatObject.senderId = currentUser?.id
+                chatObject.senderName = currentUser?.name
+                // Set any additional properties of the Chat object
+                
+                let newMessageRef = chatRef.childByAutoId()
+        newMessageRef.setValue(chatObject.toDictionary()) { [weak self] error, _ in
+                    if let error = error {
+                        print("Failed to send message to Firebase: \(error)")
+                        return
+                    }
+                    
+                    self?.chat.append(chatObject)
+                    self?.chatTableView.reloadData()
+                    
+                    self?.chatbar.text = nil
+                }
             }
-        }
-    }
-    // Perform any additional setup after loading the view.
-    //        setupUI()
-    //        loadChatHistory()
-    
-    
-    
-    
-    
-    
 }

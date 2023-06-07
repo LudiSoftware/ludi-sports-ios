@@ -25,6 +25,9 @@ class TeamOverAllViewController: UIViewController {
         
         
     }
+    @IBAction func timerButton(_ sender: Any) {
+        performSegue(withIdentifier: "timerSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +57,6 @@ class TeamOverAllViewController: UIViewController {
         if segue.identifier == "formationSegue" {
             if let destinationVC = segue.destination as? FormationViewController {
                 destinationVC.rosterId = team?.rosterId
-                
             }
         }
     }
