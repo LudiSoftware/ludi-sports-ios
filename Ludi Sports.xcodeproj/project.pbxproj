@@ -208,6 +208,8 @@
 				7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */,
 				780299102A1FDFB600FBFE66 /* FormationCell.swift */,
 				780299112A1FDFB600FBFE66 /* FormationCell.xib */,
+				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
+				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -360,7 +362,6 @@
 			isa = PBXGroup;
 			children = (
 				FB06D77229F8747300E2E26B /* LudiLoginViewController.swift */,
-				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
 				FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */,
 			);
 			path = login;

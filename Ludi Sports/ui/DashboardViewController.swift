@@ -14,9 +14,10 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var welcomeImage: UIImageView!
     @IBOutlet weak var sportTableView: SportTableView!
     @IBOutlet weak var teamTableView: TeamTableView!
+    @IBOutlet weak var btnToLogin: UIBarButtonItem!
     
     var realmInstance = realm()
-     var teams: [Team] = []
+    var teams: [Team] = []
     var coach: Coach? = nil
    
 
@@ -25,6 +26,10 @@ class DashboardViewController: UIViewController {
         print("yay!!")
         
         //welcomeImage.image = "Here lies an image."
+        navigationItem.hidesBackButton = true
+        
+//        var testObjs = realmInstance.findAllSports()
+//        var test2 = testObjs?.toList()
         
         if let name = realmInstance.realmUser()?.name{
             welcomeUser.text = "Welcome, \(name)"
@@ -36,16 +41,12 @@ class DashboardViewController: UIViewController {
         teamTableView.rowHeight = UITableView.automaticDimension
         teamTableView.estimatedRowHeight = 600
 
-         coach = realmInstance.findCoachBySafeId()
-
-        
+        coach = realmInstance.findCoachBySafeId()
         
         teamTableView.reloadData()
         sportTableView.reloadData()
         // Do any additional setup after loading the view.
-        
-       
-        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,16 +61,5 @@ class DashboardViewController: UIViewController {
                 }
             }
         }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 }

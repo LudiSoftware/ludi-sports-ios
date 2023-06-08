@@ -26,17 +26,23 @@ class LudiLoginActivity: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        auth = Auth.auth()
+    
         
+        // Set the back button color to white
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        auth = Auth.auth()
 //        hideProgressBar()
         
-//        btnLoginSignUp.addTarget(self, action: #selector(launchSignUpActivity), for: .touchUpInside)
-//        btnLogin.addTarget(self, action: #selector(doLogin), for: .touchUpInside)
-//
+   //     btnLoginSignUp.addTarget(self, action: #selector(launchSignUpActivity), for: .touchUpInside)
+     //   btnLogin.addTarget(self, action: #selector(doLogin), for: .touchUpInside)
+        
+  
 //        editPassword.addTarget(self, action: #selector(doLogin), for: .editingDidEndOnExit)
         
 //        self.navigationController?.navigationBar.isHidden = true
-        doLogin()
+   //     doLogin()
+        
     }
     
     private func showProgressBar() {
