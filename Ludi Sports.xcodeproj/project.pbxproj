@@ -152,6 +152,7 @@
 				78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */,
 				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
 				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
+				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				FB06D77229F8747300E2E26B /* LudiLoginViewController.swift */,
-				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
 				FB41556829F8F48D000DC692 /* ProviderLoginViewController.swift */,
 			);
 			path = login;

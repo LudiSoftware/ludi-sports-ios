@@ -12,6 +12,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var sportTableView: SportTableView!
     @IBOutlet weak var teamTableView: TeamTableView!
+    @IBOutlet weak var btnToLogin: UIBarButtonItem!
     
     var realmInstance = realm()
  //   var teams: [Team] = []
@@ -19,6 +20,9 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("yay!!")
+        
+        navigationItem.hidesBackButton = true
+        
         
 //        var testObjs = realmInstance.findAllSports()
 //        var test2 = testObjs?.toList()
@@ -29,12 +33,12 @@ class DashboardViewController: UIViewController {
         teamTableView.reloadData()
         sportTableView.reloadData()
         // Do any additional setup after loading the view.
-        
-       
-        
+
     }
     
-
+    private func segueToLogin() {
+            segue("toLogin")
+        }
     /*
     // MARK: - Navigation
 
