@@ -22,8 +22,8 @@ class AuthControllerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fireGetSportsAsync(realm: realmInstance)
-               verifyUserLogin()
+        fireGetSportsAsync(realm: realmInstance) 
+        verifyUserLogin()
     }
     
     private func verifyUserLogin() {
@@ -35,6 +35,7 @@ class AuthControllerViewController: UIViewController {
     }
     
     private func navigateUser(_ user: User?) {
+        
         if user == nil {
             return segue("toMainDashboard") // Replace with your method to launch MasterUserActivity
         }

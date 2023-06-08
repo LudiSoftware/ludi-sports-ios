@@ -1,20 +1,20 @@
 //
-//  TeamLiveDat.swift
+//  ChatLiveData.swift
 //  Ludi Sports
 //
-//  Created by Charles Romeo on 4/26/23.
+//  Created by Michael Zanaty on 6/1/23.
 //
 
 import Foundation
 import Firebase
 import RealmSwift
 
-protocol ValueEventListener {
-    func onDataChange(snapshot: DataSnapshot)
-    func onCancelled(error: Error)
-}
+//protocol ValueEventListener {
+//    func onDataChange(snapshot: DataSnapshot)
+//    func onCancelled(error: Error)
+//}
 
-class TeamLiveData: NSObject {
+class ChatLiveData: NSObject {
     private let realmIds: [String]
     private let realmInstance: Realm
     private var fireReferences: [String: DatabaseReference] = [:]
@@ -25,14 +25,14 @@ class TeamLiveData: NSObject {
     init(realmIds: [String], realmInstance: Realm, fun: @escaping (() -> Void)) {
         self.realmIds = realmIds
         self.realmInstance = realmInstance
-        self.reference = Database.database().reference().child(DatabasePaths.teams.rawValue)
+        self.reference = Database.database().reference().child(DatabasePaths.chat.rawValue)
         super.init()
         createObservers()
         observeRealmIds(completion: fun)
     }
     
     // Create Observer Pairs
-     func createObservers() {
+    func createObservers() {
         for realmId in realmIds {
             let referenceChild = reference.child(realmId)
             fireReferences[realmId] = referenceChild
@@ -43,61 +43,36 @@ class TeamLiveData: NSObject {
             }
         }
     }
+    
     func observeRealmIds(completion: (() -> Void)? = nil) {
-        let results = realmInstance.objects(Team.self)
-        print(results)
-        // Iterate through the list of Team objects
+        let results = realmInstance.objects(Chat.self)
         for result in results {
-            // Observe changes for each Team object
             let token = result.observe { _ in
-                // Get the current list of Teams based on realmIds
                 let currentList = self.realmIds.compactMap { id in
-                    self.realmInstance.object(ofType: Team.self, forPrimaryKey: id)
+                    self.realmInstance.object(ofType: Chat.self, forPrimaryKey: id)
                 }
-                // Check if the observed Team is in the current list
-                print(currentList)
                 if currentList.contains(result) {
                     completion?()
                 }
             }
             notificationTokens.append(token)
-            print(token)
         }
     }
-
-
-
-   
-    // Realm Observer
-//     func observeRealmIds(completion: (() -> Void)? = nil) {
-//        let results = realmInstance.objects(Team.self)
-//         print(results)
-//        for result in results {
-//            let token = result.observe { [weak self] _ in
-//                if let self = self {
-//                    let currentList = self.realmIds.compactMap { id in
-//                        self.realmInstance.object(ofType: Team.self, forPrimaryKey: id)
-//                    }
-//                    if currentList.contains(result) {
-//                        // Handle data update here
-//
-//                        completion?()
-//
-//                    }
-//
-//                }
-//
-//            }
-//            notificationTokens.append(token)
-//            print(token)
-//
-//        }
-//    }
     
     // Firebase Observer
     private func onDataChange(snapshot: DataSnapshot) {
-        // Handle snapshot data conversion and update here
-        var _ = snapshot.toLudiObject(Team.self, realm: realmInstance)
+        if let chatData = snapshot.value as? [String: Any] {
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: chatData, options: [])
+                let decoder = JSONDecoder()
+                let chat = try decoder.decode(Chat.self, from: jsonData)
+                // Handle the updated chat object here
+                // ...
+            } catch {
+                // Error handling
+                print("Error decoding chat data: \(error)")
+            }
+        }
     }
     
     // Enable/Disable Helpers
@@ -119,6 +94,3 @@ class TeamLiveData: NSObject {
         }
     }
 }
-
-
-

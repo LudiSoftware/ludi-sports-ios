@@ -8,11 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
+		7802990F2A1FDF9E00FBFE66 /* FormationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */; };
+		780299122A1FDFB600FBFE66 /* FormationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780299102A1FDFB600FBFE66 /* FormationCell.swift */; };
+		780299132A1FDFB600FBFE66 /* FormationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 780299112A1FDFB600FBFE66 /* FormationCell.xib */; };
+		782483CE2A13303F00C78173 /* FireCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CD2A13303F00C78173 /* FireCoach.swift */; };
+		782483D02A13322B00C78173 /* FireUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782483CF2A13322B00C78173 /* FireUser.swift */; };
+		785738E62A1699B8000D7D53 /* TeamOverAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */; };
+		785738E92A169F29000D7D53 /* PlayerCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785738E72A169F29000D7D53 /* PlayerCCell.swift */; };
+		785738EA2A169F29000D7D53 /* PlayerCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785738E82A169F29000D7D53 /* PlayerCCell.xib */; };
+		78737FFE2A1D9A43000443B4 /* FormationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78737FFD2A1D9A43000443B4 /* FormationViewController.swift */; };
+		78966C242A17F76700583279 /* TeamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C232A17F76700583279 /* TeamRosterViewController.swift */; };
+		78966C262A1804B000583279 /* FireRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C252A1804B000583279 /* FireRoster.swift */; };
+		78966C282A185D5800583279 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C272A185D5800583279 /* TabBarViewController.swift */; };
+		78966C2A2A18631D00583279 /* ChatForCoachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C292A18631D00583279 /* ChatForCoachesViewController.swift */; };
+		78966C2C2A18633600583279 /* TeamNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C2B2A18633600583279 /* TeamNotesViewController.swift */; };
+		78966C302A1B1E3F00583279 /* FireNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C2F2A1B1E3F00583279 /* FireNotes.swift */; };
+		78966C332A1BFE5400583279 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C312A1BFE5400583279 /* NoteCell.swift */; };
+		78966C342A1BFE5400583279 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78966C322A1BFE5400583279 /* NoteCell.xib */; };
+		78966C362A1C6B2C00583279 /* FireChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78966C352A1C6B2C00583279 /* FireChat.swift */; };
+		78C05C8D2A291DDA00898DC0 /* ChatLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05C8C2A291DDA00898DC0 /* ChatLiveData.swift */; };
+		78C8154F2A1D321600CA8D01 /* chatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8154D2A1D321600CA8D01 /* chatMessage.swift */; };
+		78C815502A1D321600CA8D01 /* chatMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C8154E2A1D321600CA8D01 /* chatMessage.xib */; };
+		78E893CB2A2EA59E00FC9A3A /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E893CA2A2EA59E00FC9A3A /* TimerViewController.swift */; };
 		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
 		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
 		78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */; };
-		78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */; };
 		78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */; };
+		78FEAC7C2A148EC60013C929 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEAC7A2A148EC60013C929 /* TeamCell.swift */; };
+		78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEAC7B2A148EC60013C929 /* TeamCell.xib */; };
 		FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71C29F7029E00E2E26B /* AppDelegate.swift */; };
 		FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06D71E29F7029E00E2E26B /* SceneDelegate.swift */; };
 		FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB06D72229F7029E00E2E26B /* Main.storyboard */; };
@@ -60,11 +83,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTableView.swift; sourceTree = "<group>"; };
+		780299102A1FDFB600FBFE66 /* FormationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationCell.swift; sourceTree = "<group>"; };
+		780299112A1FDFB600FBFE66 /* FormationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormationCell.xib; sourceTree = "<group>"; };
+		782483CD2A13303F00C78173 /* FireCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCoach.swift; sourceTree = "<group>"; };
+		782483CF2A13322B00C78173 /* FireUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireUser.swift; sourceTree = "<group>"; };
+		785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverAllViewController.swift; sourceTree = "<group>"; };
+		785738E72A169F29000D7D53 /* PlayerCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCCell.swift; sourceTree = "<group>"; };
+		785738E82A169F29000D7D53 /* PlayerCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCCell.xib; sourceTree = "<group>"; };
+		78737FFD2A1D9A43000443B4 /* FormationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationViewController.swift; sourceTree = "<group>"; };
+		78966C232A17F76700583279 /* TeamRosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRosterViewController.swift; sourceTree = "<group>"; };
+		78966C252A1804B000583279 /* FireRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireRoster.swift; sourceTree = "<group>"; };
+		78966C272A185D5800583279 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		78966C292A18631D00583279 /* ChatForCoachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatForCoachesViewController.swift; sourceTree = "<group>"; };
+		78966C2B2A18633600583279 /* TeamNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNotesViewController.swift; sourceTree = "<group>"; };
+		78966C2F2A1B1E3F00583279 /* FireNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireNotes.swift; sourceTree = "<group>"; };
+		78966C312A1BFE5400583279 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		78966C322A1BFE5400583279 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
+		78966C352A1C6B2C00583279 /* FireChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChat.swift; sourceTree = "<group>"; };
+		78C05C8C2A291DDA00898DC0 /* ChatLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLiveData.swift; sourceTree = "<group>"; };
+		78C8154D2A1D321600CA8D01 /* chatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatMessage.swift; sourceTree = "<group>"; };
+		78C8154E2A1D321600CA8D01 /* chatMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = chatMessage.xib; sourceTree = "<group>"; };
+		78E893CA2A2EA59E00FC9A3A /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
 		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
-		78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireTeam.swift; sourceTree = "<group>"; };
+		78FEAC7A2A148EC60013C929 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		78FEAC7B2A148EC60013C929 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ludi_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98E4A186E52EEF5BC87B8E /* Pods-Ludi Sports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.release.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.release.xcconfig"; sourceTree = "<group>"; };
 		BB0027EB78E0697BF0701676 /* Pods-Ludi Sports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ludi Sports.debug.xcconfig"; path = "Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +197,17 @@
 				78F51E272A0C12F7003D83A0 /* SportTableView.swift */,
 				78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */,
 				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
+				78FEAC7A2A148EC60013C929 /* TeamCell.swift */,
+				78FEAC7B2A148EC60013C929 /* TeamCell.xib */,
+				785738E72A169F29000D7D53 /* PlayerCCell.swift */,
+				785738E82A169F29000D7D53 /* PlayerCCell.xib */,
+				78966C312A1BFE5400583279 /* NoteCell.swift */,
+				78966C322A1BFE5400583279 /* NoteCell.xib */,
+				78C8154D2A1D321600CA8D01 /* chatMessage.swift */,
+				78C8154E2A1D321600CA8D01 /* chatMessage.xib */,
+				7802990E2A1FDF9E00FBFE66 /* FormationTableView.swift */,
+				780299102A1FDFB600FBFE66 /* FormationCell.swift */,
+				780299112A1FDFB600FBFE66 /* FormationCell.xib */,
 				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
 				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
 			);
@@ -257,6 +314,11 @@
 				FB41556F29FA3004000DC692 /* FireSports.swift */,
 				FB41557129FA30CF000DC692 /* FireData.swift */,
 				78F51E2F2A0E9EAD003D83A0 /* FireTeam.swift */,
+				782483CD2A13303F00C78173 /* FireCoach.swift */,
+				782483CF2A13322B00C78173 /* FireUser.swift */,
+				78966C252A1804B000583279 /* FireRoster.swift */,
+				78966C2F2A1B1E3F00583279 /* FireNotes.swift */,
+				78966C352A1C6B2C00583279 /* FireChat.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -267,6 +329,13 @@
 				78F51E262A0C12E7003D83A0 /* Views */,
 				FB06D77129F8743D00E2E26B /* login */,
 				FB06D77A29F87EBE00E2E26B /* DashboardViewController.swift */,
+				785738E52A1699B8000D7D53 /* TeamOverAllViewController.swift */,
+				78966C272A185D5800583279 /* TabBarViewController.swift */,
+				78966C232A17F76700583279 /* TeamRosterViewController.swift */,
+				78966C2B2A18633600583279 /* TeamNotesViewController.swift */,
+				78966C292A18631D00583279 /* ChatForCoachesViewController.swift */,
+				78737FFD2A1D9A43000443B4 /* FormationViewController.swift */,
+				78E893CA2A2EA59E00FC9A3A /* TimerViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -302,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				FB41556D29F9D1E9000DC692 /* TeamLiveDat.swift */,
+				78C05C8C2A291DDA00898DC0 /* ChatLiveData.swift */,
 			);
 			path = LiveData;
 			sourceTree = "<group>";
@@ -373,9 +443,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78966C342A1BFE5400583279 /* NoteCell.xib in Resources */,
 				FB06D72929F7029F00E2E26B /* LaunchScreen.storyboard in Resources */,
+				78FEAC7D2A148EC60013C929 /* TeamCell.xib in Resources */,
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
 				FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */,
+				78C815502A1D321600CA8D01 /* chatMessage.xib in Resources */,
+				780299132A1FDFB600FBFE66 /* FormationCell.xib in Resources */,
+				785738EA2A169F29000D7D53 /* PlayerCCell.xib in Resources */,
 				FB06D72429F7029E00E2E26B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,46 +506,64 @@
 			files = (
 				FB06D77729F8774B00E2E26B /* FireParser.swift in Sources */,
 				FB06D74D29F74A8900E2E26B /* PlayerRef.swift in Sources */,
+				780299122A1FDFB600FBFE66 /* FormationCell.swift in Sources */,
 				FB06D75F29F74ADA00E2E26B /* Location.swift in Sources */,
 				FB06D74B29F74A7C00E2E26B /* Team.swift in Sources */,
-				78F51E2E2A0C1DCB003D83A0 /* TeamTableViewCell.swift in Sources */,
 				FB41556E29F9D1E9000DC692 /* TeamLiveDat.swift in Sources */,
 				FB41556729F8F475000DC692 /* LudiSignUpViewController.swift in Sources */,
+				78966C362A1C6B2C00583279 /* FireChat.swift in Sources */,
 				FB06D76929F7541C00E2E26B /* RealmFind.swift in Sources */,
+				78966C242A17F76700583279 /* TeamRosterViewController.swift in Sources */,
+				78C8154F2A1D321600CA8D01 /* chatMessage.swift in Sources */,
+				78966C2C2A18633600583279 /* TeamNotesViewController.swift in Sources */,
 				FB06D77029F866FC00E2E26B /* FireCore.swift in Sources */,
 				FB06D75329F74A8F00E2E26B /* Chat.swift in Sources */,
 				FB06D75129F74A8D00E2E26B /* TryOut.swift in Sources */,
 				FB41557029FA3004000DC692 /* FireSports.swift in Sources */,
 				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
+				785738E92A169F29000D7D53 /* PlayerCCell.swift in Sources */,
 				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
+				78FEAC7C2A148EC60013C929 /* TeamCell.swift in Sources */,
 				78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */,
+				78966C2A2A18631D00583279 /* ChatForCoachesViewController.swift in Sources */,
 				78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */,
 				FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */,
 				FB06D77529F875D900E2E26B /* FireLogin.swift in Sources */,
 				FB06D75929F74AD400E2E26B /* League.swift in Sources */,
 				78F51E2C2A0C1DB3003D83A0 /* TeamTableView.swift in Sources */,
 				FB06D76E29F7547A00E2E26B /* RosterSession.swift in Sources */,
+				78966C302A1B1E3F00583279 /* FireNotes.swift in Sources */,
 				FB06D75D29F74AD800E2E26B /* Sport.swift in Sources */,
 				FB06D77329F8747300E2E26B /* LudiLoginViewController.swift in Sources */,
 				FB06D73C29F7098E00E2E26B /* RealmInstance.swift in Sources */,
 				FB06D74029F7101400E2E26B /* LudiSystem.swift in Sources */,
 				FB41557229FA30CF000DC692 /* FireData.swift in Sources */,
+				78966C262A1804B000583279 /* FireRoster.swift in Sources */,
+				782483D02A13322B00C78173 /* FireUser.swift in Sources */,
+				785738E62A1699B8000D7D53 /* TeamOverAllViewController.swift in Sources */,
 				FB41556929F8F48D000DC692 /* ProviderLoginViewController.swift in Sources */,
 				FB41556B29F8FA9B000DC692 /* Extensions.swift in Sources */,
 				FB06D73E29F70FBA00E2E26B /* User.swift in Sources */,
+				78737FFE2A1D9A43000443B4 /* FormationViewController.swift in Sources */,
 				FB06D73829F7086F00E2E26B /* AuthController.swift in Sources */,
 				FB06D71D29F7029E00E2E26B /* AppDelegate.swift in Sources */,
 				FB06D74329F710DD00E2E26B /* DateTime.swift in Sources */,
 				FB06D75B29F74AD500E2E26B /* Service.swift in Sources */,
 				FB06D74929F7111500E2E26B /* Player.swift in Sources */,
+				782483CE2A13303F00C78173 /* FireCoach.swift in Sources */,
 				FB06D74529F7110300E2E26B /* Coach.swift in Sources */,
+				7802990F2A1FDF9E00FBFE66 /* FormationTableView.swift in Sources */,
 				FB06D76129F74AFF00E2E26B /* CustomAttribute.swift in Sources */,
 				FB06D76C29F7547600E2E26B /* TeamSession.swift in Sources */,
 				FB06D75729F74A9200E2E26B /* Organization.swift in Sources */,
 				FB06D74729F7110C00E2E26B /* Parent.swift in Sources */,
 				FB06D74F29F74A8B00E2E26B /* Roster.swift in Sources */,
 				78F51E302A0E9EAD003D83A0 /* FireTeam.swift in Sources */,
+				78C05C8D2A291DDA00898DC0 /* ChatLiveData.swift in Sources */,
 				FB06D71F29F7029E00E2E26B /* SceneDelegate.swift in Sources */,
+				78E893CB2A2EA59E00FC9A3A /* TimerViewController.swift in Sources */,
+				78966C332A1BFE5400583279 /* NoteCell.swift in Sources */,
+				78966C282A185D5800583279 /* TabBarViewController.swift in Sources */,
 				FB06D77B29F87EBE00E2E26B /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
