@@ -9,25 +9,55 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-class LudiSignUpViewController: UIViewController {
+class LudiSignUpViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var userName: UITextField!  // Username = email address
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var btnSignIn: UIButton!
+    @IBOutlet weak var btnUploadImage: UIButton!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var btnSignUp: UIButton!
     
     @IBOutlet weak var checkCoach: UISwitch!
     @IBOutlet weak var checkParent: UISwitch!
     @IBOutlet weak var checkBasic: UISwitch!
     
     var userTypeSelection: String = ""
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnSignIn.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        // Set the back button color to white
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        btnUploadImage.addTarget(self, action: #selector(uploadImage), for: .touchUpInside)
+        
+//        btnSignIn.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
 //        setupCheckboxes()
     }
     
+    @objc func uploadImage() {
+           let imagePicker = UIImagePickerController()
+           imagePicker.delegate = self
+           imagePicker.sourceType = .photoLibrary
+           imagePicker.allowsEditing = false
+           present(imagePicker, animated: true, completion: nil)
+       }
+       
+      @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+           dismiss(animated: true, completion: nil)
+           
+           guard let selectedImage = info[.originalImage] as? UIImage else {
+               return
+           }
+           
+           profileImage.image = selectedImage
+       }
+       
+    @objc func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+           dismiss(animated: true, completion: nil)
+       }
     @objc private func signInButtonTapped() {
         if isUsernamePasswordValid() {
             checkIfEmailExists()

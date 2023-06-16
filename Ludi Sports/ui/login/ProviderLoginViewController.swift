@@ -20,7 +20,7 @@ class ProviderLoginViewController: UIViewController, FUIAuthDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("authPosted")
         let providers: [FUIAuthProvider] = [
             FUIEmailAuth(),
             FUIGoogleAuth()

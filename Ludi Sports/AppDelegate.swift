@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realmConfiguration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = realmConfiguration
         FirebaseApp.configure()
+        
         return true
     }
 

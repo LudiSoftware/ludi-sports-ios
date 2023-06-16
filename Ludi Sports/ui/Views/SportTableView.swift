@@ -24,9 +24,12 @@ class SportTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        var sports = realmInstance.findAllSports()
-        var sport = sports?.toList()
         
+        
+        
+        let sports = realmInstance.findAllSports()
+        let sport = sports?.toList()
+        print(sports)
         sportsList += sport!
     
         dataSource = self
