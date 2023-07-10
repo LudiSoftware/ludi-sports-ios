@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import RealmSwift
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Initialize Realm
+        GMSServices.provideAPIKey("AIzaSyDpbNqHyRv-1rfy-kEwaUQXRiqAw9z-QE0")
         let realmConfiguration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = realmConfiguration
         FirebaseApp.configure()

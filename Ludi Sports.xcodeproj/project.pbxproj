@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311AE0442A5721A200EC5D8E /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AE0432A5721A200EC5D8E /* DiscoveryViewController.swift */; };
+		311AE0462A5A694D00EC5D8E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 311AE0452A5A694C00EC5D8E /* Podfile */; };
+		311AE0482A5A6A5800EC5D8E /* RedZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AE0472A5A6A5800EC5D8E /* RedZoneViewController.swift */; };
 		5E0431B40528FCA31E67EEDF /* Pods_Ludi_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBC53586060C25B5E04217 /* Pods_Ludi_Sports.framework */; };
 		78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E272A0C12F7003D83A0 /* SportTableView.swift */; };
 		78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */; };
@@ -60,6 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		311AE0432A5721A200EC5D8E /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		311AE0452A5A694C00EC5D8E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		311AE0472A5A6A5800EC5D8E /* RedZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedZoneViewController.swift; sourceTree = "<group>"; };
 		78F51E272A0C12F7003D83A0 /* SportTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableView.swift; sourceTree = "<group>"; };
 		78F51E292A0C1302003D83A0 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableView.swift; sourceTree = "<group>"; };
@@ -153,6 +159,8 @@
 				78F51E2B2A0C1DB3003D83A0 /* TeamTableView.swift */,
 				78F51E2D2A0C1DCB003D83A0 /* TeamTableViewCell.swift */,
 				FB41556629F8F475000DC692 /* LudiSignUpViewController.swift */,
+				311AE0432A5721A200EC5D8E /* DiscoveryViewController.swift */,
+				311AE0472A5A6A5800EC5D8E /* RedZoneViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 				FB06D72229F7029E00E2E26B /* Main.storyboard */,
 				FB06D72529F7029F00E2E26B /* Assets.xcassets */,
 				FB06D72729F7029F00E2E26B /* LaunchScreen.storyboard */,
+				311AE0452A5A694C00EC5D8E /* Podfile */,
 				FB06D73529F7075F00E2E26B /* GoogleService-Info.plist */,
 				FB06D72A29F7029F00E2E26B /* Info.plist */,
 				FB06D73729F7086F00E2E26B /* AuthController.swift */,
@@ -318,6 +327,7 @@
 				FB06D71629F7029E00E2E26B /* Frameworks */,
 				FB06D71729F7029E00E2E26B /* Resources */,
 				80715F4B32163B27A08CF9BB /* [CP] Embed Pods Frameworks */,
+				23230F5815DCFE4D7C6D6A3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311AE0462A5A694D00EC5D8E /* Podfile in Resources */,
 				FB06D72929F7029F00E2E26B /* LaunchScreen.storyboard in Resources */,
 				FB06D73629F7075F00E2E26B /* GoogleService-Info.plist in Resources */,
 				FB06D72629F7029F00E2E26B /* Assets.xcassets in Resources */,
@@ -383,6 +394,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23230F5815DCFE4D7C6D6A3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ludi Sports/Pods-Ludi Sports-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		80715F4B32163B27A08CF9BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +472,8 @@
 				FB06D76629F751E400E2E26B /* ModeProvider.swift in Sources */,
 				FB06D75529F74A9000E2E26B /* Note.swift in Sources */,
 				78F51E282A0C12F7003D83A0 /* SportTableView.swift in Sources */,
+				311AE0482A5A6A5800EC5D8E /* RedZoneViewController.swift in Sources */,
+				311AE0442A5721A200EC5D8E /* DiscoveryViewController.swift in Sources */,
 				78F51E2A2A0C1302003D83A0 /* SportTableViewCell.swift in Sources */,
 				FB06D77929F8775C00E2E26B /* RealmParser.swift in Sources */,
 				FB06D77529F875D900E2E26B /* FireLogin.swift in Sources */,
@@ -619,7 +649,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7AYMD222NU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ludi Sports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -648,7 +678,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7AYMD222NU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ludi Sports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

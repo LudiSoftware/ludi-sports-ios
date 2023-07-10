@@ -13,5 +13,6 @@ target 'Ludi Sports' do
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
+  pod 'GoogleMaps'
 
 end
